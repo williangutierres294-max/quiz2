@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descubra seu perfil — Renda Extra em Casa</title>
+<script>
+  (function() {
+    try {
+      var _fetch = window.fetch;
+      Object.defineProperty(window, 'fetch', {
+        get: function() {
+          return _fetch;
+        },
+        set: function(fn) {
+          _fetch = fn;
+        },
+        configurable: true,
+        enumerable: true
+      });
+    } catch(e) {}
+  })();
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y00sqnunia");
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ibb.co">
+<link rel="preload" as="image" href="https://i.ibb.co/KjznzZm2/imagem-site-otimizada.webp" type="image/webp">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+  :root{
+    --paper:#F2F5EE;
+    --paper-2:#E7EEE0;
+    --ink:#1D2B22;
+    --ink-soft:#57685B;
+    --gold:#E8A33D;
+    --gold-deep:#C97F1E;
+    --mint:#2F9E64;
+    --sage:#8FA888;
+    --receipt:#FFFDF8;
+    --card:#FFFFFF;
+    --font:'Poppins', -apple-system, sans-serif;
+    --radius-lg:24px;
+    --radius-md:16px;
+    --radius-sm:14px;
+    --shadow-card: 0 24px 48px -24px rgba(29,43,34,0.28);
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background-color:var(--paper);
+    background-image: radial-gradient(circle at 1px 1px, rgba(143,168,136,0.22) 1px, transparent 0);
+    background-size: 22px 22px;
+    font-family:var(--font);
+    color:var(--ink);
+    display:flex;
+    justify-content:center;
+    padding:28px 16px 60px;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  body.center-screen{ align-items:center; padding-top:16px; padding-bottom:16px; }
+
+  .blob{ position:fixed; border-radius:50%; filter:blur(64px); z-index:0; opacity:0.3; animation: float 12s ease-in-out infinite; }
+  .blob-a{ width:280px; height:280px; background:var(--gold); top:-80px; left:-100px; }
+  .blob-b{ width:320px; height:320px; background:var(--sage); bottom:-120px; right:-120px; animation-delay:-6s; }
+  @keyframes float{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-18px) } }
+
+  .app-shell{ width:100%; max-width:440px; position:relative; z-index:1; }
+
+  .topbar{ display:flex; align-items:center; gap:12px; margin-bottom:26px; min-height:6px; }
+  .progress-track{ flex:1; height:6px; background:#E5E7EB; border-radius:999px; overflow:hidden; }
+  .progress-fill{ height:100%; background:#16A34A; border-radius:999px; transition:width 420ms ease; }
+  .step-label{ font-size:12.5px; font-weight:600; color:#111827; white-space:nowrap; font-weight: 700; }
+
+  .card{ padding:24px 16px; text-align:center; position: relative; overflow: visible; }
+body.is-landing { padding-top: 12px; padding-bottom: 0px; min-height: 100vh; }
+body.is-landing .topbar { display: none; }
+body.is-landing .card { padding: 12px 16px 0px; background: transparent; box-shadow: none; margin-bottom: 0; }
+
+body.is-landing .stage { position: relative; z-index: 1; }
+
+  .stage.anim{ animation: fadeSlideIn 460ms cubic-bezier(.2,.7,.3,1) both; }
+  @keyframes fadeSlideIn{ from{ opacity:0; transform:translateY(16px);} to{ opacity:1; transform:translateY(0);} }
+
+  .hero-icon{ width:56px; height:56px; border-radius:16px; background:var(--paper-2); display:flex; align-items:center; justify-content:center; font-size:28px; margin:0 0 18px; }
+
+  .eyebrow{ display:inline-flex; align-items:center; justify-content:center; gap:6px; background:rgba(232,163,61,0.15); color:var(--gold-deep); font-weight:700; font-size:12.5px; padding:7px 13px; border-radius:999px; margin:0 auto 16px; }
+
+  h1{ font-family:var(--font); font-weight:800; font-size:clamp(26px,7vw,34px); line-height:1.2; margin:0 0 16px; letter-spacing:-0.01em; text-align:center; }
+  .accent{ color:var(--mint); }
+  .sub{ font-size:16px; line-height:1.55; color:var(--ink-soft); margin:0 0 26px; font-weight:400; text-align:center; }
+
+  .btn-primary{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:17px 20px; background:var(--ink); color:var(--paper); border:none; border-radius:var(--radius-sm); font-family:var(--font); font-weight:700; font-size:16px; cursor:pointer; transition:transform 150ms ease, background 150ms ease; }
+  .btn-primary:hover{ background:#132018; transform:translateY(-1px); }
+  .btn-primary:active{ transform:translateY(0); }
+  .btn-primary:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+  .btn-cta{ background:var(--gold); color:var(--ink); text-decoration:none; }
+  .btn-cta:hover{ background:var(--gold-deep); color:#fff; }
+  .trust{ text-align:center; font-size:13px; font-weight:500; color:var(--ink-soft); margin-top:14px; }
+
+  .qcount{ font-size:13px; font-weight:700; color:var(--sage); margin:0 0 12px; }
+  h2{ font-family:var(--font); font-weight:700; font-size:22px; line-height:1.32; margin:0 0 8px; letter-spacing:-0.01em; }
+  .qsub{ font-size:14px; color:var(--ink-soft); margin:0 0 22px; font-weight:400; }
+
+  .options{ display:flex; flex-direction:column; gap:10px; margin-bottom:22px; }
+  .option{ display:flex; align-items:center; gap:14px; width:100%; text-align:left; padding:12px 14px; background:var(--paper-2); border:2px solid transparent; border-radius:var(--radius-md); cursor:pointer; font-family:var(--font); font-size:15px; font-weight:600; color:var(--ink); transition:all 150ms ease; }
+  .option:hover{ border-color:var(--sage); background:#DEE8D6; transform:translateY(-1px); }
+  .option:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
+  .opt-icon{ width:40px; height:40px; border-radius:12px; background:var(--card); display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; }
+
+  .receipt{ background:var(--receipt); border-radius:14px; padding:18px 18px 16px; box-shadow:0 14px 26px -16px rgba(29,43,34,0.32); transform:rotate(-0.5deg); position:relative; margin-top:6px; border-top:2px dashed var(--sage); border-bottom:2px dashed var(--sage); }
+  .receipt-title{ font-size:12px; font-weight:700; letter-spacing:0.03em; text-align:center; color:var(--ink-soft); margin:0 0 12px; }
+  .receipt-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; font-size:13.5px; font-weight:500; color:var(--ink); padding:6px 0; }
+  .r-left{ display:flex; align-items:center; gap:8px; color:var(--ink-soft); }
+  .r-icon{ font-size:14px; }
+  .receipt-divider{ border-top:1px dashed var(--sage); margin:10px 0; }
+  .receipt-total{ font-weight:800; font-size:15px; }
+  .receipt-total span{ color:var(--ink) !important; }
+  .receipt-final{ padding-top:22px; }
+  .stamp{ position:absolute; top:-12px; right:14px; border:3px solid var(--mint); color:var(--mint); padding:6px 11px; font-weight:800; font-size:10.5px; letter-spacing:0.03em; text-align:center; transform:rotate(-8deg); border-radius:8px; background:rgba(47,158,100,0.08); line-height:1.25; }
+
+  .loading-wrap{ text-align:center; padding:64px 16px 56px; }
+  .ring{ width:52px; height:52px; margin:0 auto 22px; border-radius:50%; border:4px solid var(--paper-2); border-top-color:var(--gold); animation:spin 900ms linear infinite; }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+  .loading-title{ font-family:var(--font); font-size:19px; font-weight:700; margin:0 0 8px; }
+  .loading-sub{ font-size:14px; color:var(--ink-soft); margin:0; font-weight:400; }
+
+  .video-frame{ background:linear-gradient(150deg,#1D2B22,#0E1610); border-radius:var(--radius-md); aspect-ratio:9/16; max-height:360px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; margin:22px 0 18px; position:relative; overflow:hidden; cursor:pointer; }
+  .video-play{ width:62px; height:62px; border-radius:50%; background:var(--gold); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:20px; padding-left:4px; }
+  .video-label{ color:var(--paper); font-family:var(--font); font-weight:600; font-size:14px; margin:0; }
+
+  .video-teaser{ display:flex; align-items:center; gap:14px; background:var(--paper-2); border-radius:var(--radius-md); padding:14px 16px; margin-top:22px; margin-bottom:14px; text-align:left; }
+  .mini-play{ width:44px; height:44px; border-radius:12px; background:var(--ink); color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; padding-left:2px; }
+  .video-teaser-text{ font-size:13.5px; font-weight:700; color:var(--ink); line-height:1.4; margin:0; }
+  .video-teaser-text span{ display:block; font-size:12.5px; font-weight:500; color:var(--ink-soft); margin-top:3px; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+  .landing-badge { margin-bottom: 8px;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #E7F3EB;
+    border: 1px solid #C2E2CC;
+    color: #198737;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 99px;
+    margin-bottom: 16px;
+  }
+  .social-proof-banner { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; }
+  .sp-avatars { display: flex; }
+  .sp-avatars img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; margin-left: -10px; }
+  .sp-avatars img:first-child { margin-left: 0; }
+  .sp-text { text-align: left; font-size: 11px; color: #4A5D52; line-height: 1.2; }
+  .sp-stars { color: #F9C300; font-size: 14px; margin-bottom: 2px; display:flex; gap:2px; }
+  .sp-text strong { color: #112318; }
+  .landing-title { font-size: 34px; font-weight: 800; color: #112318; line-height: 1.1; margin-bottom: 8px; letter-spacing: -1px; }
+  .landing-title .highlight { color: #198737; position: relative; display: inline-block; }
+  .landing-title .highlight svg { position: absolute; bottom: -6px; left: 0; width: 100%; height: 8px; z-index: -1; }
+  .landing-sub-text { font-size: 15px; color: #4A5D52; margin-bottom: 8px; line-height: 1.4; }
+  .landing-sub-text strong { color: #198737; }
+  .hero-layout { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .hero-image-col { flex: 1; position: relative; display: flex; justify-content: center; width: calc(100% + 48px); margin: 0 -24px;}
+  .hero-image-col img { width: 100%; max-width: 115%; transform: scale(1.12); margin-top: 12px; border-radius: 16px; mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
+  .hero-benefits-col { display: flex; justify-content: center; align-items: center; gap: 4px; text-align: center; flex-wrap: nowrap; width: 100%; }
+  .h-benefit { display: flex; align-items: center; gap: 4px; background: #F9FAFB; padding: 4px 6px; border-radius: 99px; flex: 1; justify-content: center; }
+  .h-b-icon { width: 16px; height: 16px; background: transparent; color: #198737; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .h-b-icon svg { width: 12px; height: 12px; }
+  .h-b-text { font-size: 11px; color: #4A5D52; line-height: 1.3; }
+  .h-b-text strong { font-size: 10px; color: #112318; display: block; white-space: nowrap; }
+  .landing-cta-btn { background: linear-gradient(180deg, #28A149 0%, #15732E 100%); color: white; width: 100%; padding: 18px; border-radius: 99px; font-size: 20px; font-weight: 700; border: none; box-shadow: 0 8px 24px rgba(25, 135, 55, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-bottom: 0px; transition: transform 0.2s; }
+  .landing-cta-btn:hover { transform: scale(1.02); }
+  .trust-badges-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; background: #F9FAFB; border-radius: 16px; padding: 16px 8px; margin-bottom: 16px; }
+  .t-badge { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+  .t-badge svg { width: 24px; height: 24px; color: #198737; }
+  .t-badge-text { font-size: 10px; color: #4A5D52; line-height: 1.2; }
+  .t-badge-text strong { color: #112318; display: block; font-size: 11px; }
+  .footer-trust-text { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: #4A5D52; font-weight: 500; }
+  .footer-trust-text svg { width: 14px; height: 14px; }
+  .banknote { position: absolute; z-index: 0; opacity: 0.6; pointer-events: none; }
+  .bn-1 { top: 20px; left: -50px; width: 120px; transform: rotate(-15deg); }
+  .bn-2 { top: 40px; right: -60px; width: 100px; transform: rotate(25deg); }
+  .bn-3 { bottom: 40px; left: -40px; width: 90px; transform: rotate(-10deg); }
+  .bn-4 { bottom: 20px; right: -50px; width: 110px; transform: rotate(15deg); }
+  .landing-card { background: white; border-radius: 24px; padding: 32px 16px 24px; position: relative; z-index: 1; overflow: hidden;}
+  .landing-bg-dots { position: absolute; top:0; left:0; width:100%; height:100%; background-image: radial-gradient(circle at 1px 1px, rgba(143,168,136,0.15) 1px, transparent 0); background-size: 22px 22px; z-index: -1; }
+
+  .q-header { text-align: center; margin-bottom: 20px; }
+  .q-badge { display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: #F0FDF4; color: #16A34A; padding: 6px 12px; border-radius: 99px; font-size: 13px; font-weight: 600; margin: 0 auto 16px; }
+  .q-title-row { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .q-title-col { flex: 1; text-align: center; }
+  .q-title-col h2 { font-size: 24px; font-weight: 800; color: #111827; margin-bottom: 8px; line-height: 1.2; text-align: center; }
+  .q-title-col .qsub { font-size: 15px; color: #4B5563; line-height: 1.4; margin: 0; text-align: center; }
+  .q-image-wrap { width: 120px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-right: -24px; overflow: hidden; border-radius: 100px 0 0 100px; }
+  .q-image { width: 100%; height: auto; border-radius: 16px; mask-image: linear-gradient(to right, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%); object-fit: cover;}
+  
+  .option { display:flex; align-items:center; gap:16px; width:100%; text-align:left; padding:16px; background:#FFFFFF; border:2px solid #E5E7EB; border-radius:16px; cursor:pointer; transition:all 150ms ease; box-shadow: 0 1px 2px rgba(0,0,0,0.02); margin-bottom:0 !important; }
+  .option:hover { background:#F0FDF4; border-color:#16A34A; }
+  .opt-icon { width:48px; height:48px; border-radius:50%; background:#F3F4F6; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; }
+  .option:hover .opt-icon { background: #DCFCE7; }
+  .opt-texts { display:flex; flex-direction:column; gap:2px; flex:1; }
+  .opt-label { font-size:16px; font-weight:700; color:#111827; }
+  .opt-sub { font-size:13px; font-weight:400; color:#6B7280; line-height:1.3; }
+  .opt-radio { width:24px; height:24px; border-radius:50%; border:2px solid #D1D5DB; margin-left:auto; flex-shrink:0; transition:all 150ms ease; }
+  .option:hover .opt-radio { border-color:#16A34A; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316A34A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center; background-size: 14px; }
+  
+  .q-footer { display:flex; align-items:center; gap:12px; background:#F0FDF4; padding:16px; border-radius:16px; text-align:left; margin-top:16px; }
+  .q-footer svg { flex-shrink:0; }
+  .q-footer-text { font-size:12px; color:#4B5563; line-height:1.4; }
+  .q-footer-text strong { color:#16A34A; font-size: 13px; }
+
+  /* Top Banner Box */
+  .result-step-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #F0FDF4;
+    border: 1px solid #DCFCE7;
+    border-radius: 18px;
+    padding: 12px 14px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+  .rsb-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #16A34A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .rsb-content {
+    flex: 1;
+  }
+  .rsb-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+  }
+  .rsb-sub {
+    font-size: 12px;
+    color: #4B5563;
+    line-height: 1.35;
+    margin-top: 3px;
+  }
+
+  /* Hero Result Layout */
+  .result-hero-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+  }
+  .result-hero-text {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  .result-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    color: #D97706;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 99px;
+    margin-bottom: 10px;
+  }
+  .result-title {
+    font-size: 27px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .result-highlight {
+    color: #16A34A;
+  }
+  .result-sub {
+    font-size: 13px;
+    color: #4B5563;
+    line-height: 1.45;
+    margin: 0;
+  }
+  .rs-task {
+    color: #16A34A;
+    font-weight: 700;
+  }
+
+  /* Right Side Character & Badge */
+  .result-hero-img-wrap {
+    position: relative;
+    width: 135px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -15px;
+  }
+  .result-character-img {
+    width: 125px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 20px;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
+  .approved-badge {
+    position: absolute;
+    bottom: -8px;
+    left: -22px;
+    background: #FFFFFF;
+    border: 2px solid #16A34A;
+    border-radius: 12px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 16px rgba(22, 163, 74, 0.15);
+    transform: rotate(-6deg);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  .ab-text {
+    font-size: 10px;
+    font-weight: 800;
+    color: #16A34A;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+  .ab-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #16A34A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Receipt Card */
+  .result-receipt-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 18px 16px;
+    box-shadow: 0 12px 32px rgba(29, 43, 34, 0.08);
+    border: 1px solid #E5E7EB;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
+  .rc-header {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 14px;
+  }
+  .rc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+  .rc-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .rc-icon-bg {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .rc-icon-bg.green-soft {
+    background: #F0FDF4;
+  }
+  .rc-icon-bg.green-filled {
+    background: #16A34A;
+  }
+  .rc-icon-bg.red-soft {
+    background: #FEF2F2;
+  }
+  .rc-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+  }
+  .rc-val.green {
+    font-size: 15px;
+    font-weight: 800;
+    color: #16A34A;
+  }
+  .rc-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .rc-divider {
+    border-top: 2px dashed #E5E7EB;
+    margin: 12px 0 14px;
+  }
+  .rc-total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rc-total-label {
+    font-size: 15px;
+    font-weight: 800;
+    color: #111827;
+  }
+  .rc-total-val-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .rc-total-val {
+    font-size: 24px;
+    font-weight: 800;
+    color: #16A34A;
+  }
+
+  /* CTA Wrap & Button */
+  .result-cta-wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .cta-arrow-indicator {
+    position: absolute;
+    left: -14px;
+    top: -22px;
+    z-index: 2;
+  }
+  .btn-result-cta {
+    background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 18px;
+    border-radius: 99px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+  .btn-result-cta:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 28px rgba(22, 163, 74, 0.45);
+  }
+
+  .btn-cta-green {
+    background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    width: 100%;
+    padding: 18px 20px;
+    border-radius: 99px;
+    border: none;
+    box-shadow: 0 10px 28px rgba(22, 163, 74, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    margin-top: 16px;
+  }
+  .btn-cta-green:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 32px rgba(22, 163, 74, 0.55);
+  }
+
+  /* Step 6 / Confirm Screen Styles */
+  .confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .confirm-cta-wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .confirm-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 16px 20px 16px 64px;
+    background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 99px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(22, 163, 74, 0.35);
+    transition: transform 150ms ease;
+  }
+
+  .confirm-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .gift-badge-icon {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22C55E 0%, #15803D 100%);
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  .confirm-main-card {
+    background: #F9FAF8;
+    border: 1px solid #E5E7EB;
+    border-radius: 24px;
+    padding: 20px 16px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .cmc-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .cmc-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #DCFCE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .cmc-title-wrap {
+    flex: 1;
+  }
+
+  .cmc-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 2px;
+  }
+
+  .cmc-sub {
+    font-size: 12px;
+    color: #6B7280;
+    line-height: 1.35;
+  }
+
+  .cmc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .cmc-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .cmc-item-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cmc-item-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: #F0FDF4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .cmc-item-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .cmc-item-val {
+    font-size: 15px;
+    font-weight: 800;
+    color: #16A34A;
+  }
+
+  .cmc-divider {
+    border-top: 2px dashed #C2E2CC;
+    margin: 16px 0;
+  }
+
+  .cmc-estimate-box {
+    background: #E7F3EB;
+    border-radius: 18px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .cmc-est-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .piggy-icon {
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  .cmc-est-texts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cmc-est-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .cmc-est-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #16A34A;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .cmc-est-badge {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #D1E7DD;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .cmc-eb-text {
+    font-size: 11px;
+    font-weight: 800;
+    color: #16A34A;
+    line-height: 1.15;
+    text-align: right;
+  }
+
+  .cmc-eb-star {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #16A34A;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .confirm-trust-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .ctc-col {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .ctc-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: #F0FDF4;
+    color: #16A34A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ctc-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 2px;
+    line-height: 1.2;
+  }
+
+  .ctc-sub {
+    font-size: 10px;
+    color: #6B7280;
+    line-height: 1.25;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="blob blob-a" aria-hidden="true"></div>
+  <div class="blob blob-b" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <div class="card">
+      <div class="topbar" id="topbar"></div>
+      <div class="stage" id="stage"></div>
+    </div>
+  </div>
+
+<script>
+(function(){
+
+  // 📊 RASTREAMENTO PRÓPRIO — troque pela URL do seu Apps Script (veja instruções)
+  var TRACKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxOMJ3naaGku0o4BL6cOsKsRKE3sXptDYl010QAfrqsqlnqbIEsPq7FqrMhD_OkwHI/exec';
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var utms = {
+    utm_source: urlParams.get('utm_source') || '(direto)',
+    utm_medium: urlParams.get('utm_medium') || '(direto)',
+    utm_campaign: urlParams.get('utm_campaign') || '(direto)',
+    utm_content: urlParams.get('utm_content') || '',
+    utm_term: urlParams.get('utm_term') || ''
+  };
+  var sessionId = 'sess_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
+
+  var QUESTIONS = [
+    {
+      key:'q1',
+      title:'Qual dessas tarefas <span style="color:#16A34A">você já faz quase todo dia?</span>',
+      sub:'Escolha a que mais combina com sua rotina.',
+      image: 'https://i.ibb.co/dsz2rqG0/people-doing-chores-with-phones-1786483589887.jpg',
+      options:[
+        {value:'louca', emoji:'🍽️', label:'Lavar louça', sub:'Uma tarefa rápida que você faz todos os dias.'},
+        {value:'roupa', emoji:'🧺', label:'Dobrar roupa', sub:'Você sempre separa um tempinho para deixar tudo em ordem.'},
+        {value:'pet', emoji:'🐶', label:'Cuidar do pet', sub:'Passeios, alimentação e carinho fazem parte da sua rotina.'},
+        {value:'casa', emoji:'🧹', label:'Organizar a casa', sub:'Você gosta de manter tudo limpo e organizado.'}
+      ]
+    },
+    {
+      key:'q2',
+      title:'Você sabia que empresas pagam por vídeos dessas tarefas do dia a dia?',
+      options:[
+        {value:'nao', emoji:'😮', label:'Não, não fazia ideia', sub:'Nunca ouvi falar sobre isso antes.'},
+        {value:'ouvi', emoji:'🤔', label:'Já ouvi falar, mas nunca tentei', sub:'Conheço por cima, mas não apliquei.'},
+        {value:'sim', emoji:'✅', label:'Sim, e quero aprender a fazer certo', sub:'Estou pronto para começar os testes.'}
+      ]
+    },
+    {
+      key:'q3',
+      title:'Quanto tempo por dia você teria pra gravar essas tarefas?',
+      options:[
+        {value:'15', emoji:'⏱️', label:'Até 15 minutos', sub:'Tenho uma rotina bem corrida.'},
+        {value:'30', emoji:'⏱️', label:'15 a 30 minutos', sub:'Consigo encaixar no meu dia a dia.'},
+        {value:'30+', emoji:'⏱️', label:'Mais de 30 minutos', sub:'Tenho bastante tempo livre.'}
+      ]
+    },
+    {
+      key:'q4',
+      title:'Qual seria uma boa renda extra mensal pra você, hoje?',
+      options:[
+        {value:'300', emoji:'💵', label:'R$300 a R$500', sub:'Já ajudaria nas contas do mês.'},
+        {value:'500', emoji:'💰', label:'R$500 a R$1.000', sub:'Seria uma ótima renda extra.'},
+        {value:'1000', emoji:'🤑', label:'Mais de R$1.000', sub:'Mudaria a minha realidade hoje.'}
+      ]
+    },
+    {
+      key:'q5',
+      title:'Qual dessas frases mais combina com você hoje?',
+      options:[
+        {value:'dona_casa', emoji:'🏠', label:'Sou dona de casa em tempo integral'},
+        {value:'trabalho_fora', emoji:'💼', label:'Trabalho fora e quero uma renda extra'},
+        {value:'desempregada', emoji:'🔍', label:'Estou sem emprego e buscando uma oportunidade'}
+      ]
+    }
+  ];
+
+  var TASK_VALUES = { louca:60, roupa:70, pet:65, casa:75 };
+  var TIME_VALUES = { '15':40, '30':60, '30+':85 };
+
+  var STEPS = [{type:'landing'}]
+    .concat(QUESTIONS.map(function(q, i){
+      var s = {type:'question', qNum:i+1};
+      for (var k in q) s[k] = q[k];
+      return s;
+    }))
+    .concat([{type:'loading'}, {type:'result'}, {type:'video'}]);
+
+  var current = 0;
+  var answers = {};
+
+  function findOption(qKey, value){
+    var q = QUESTIONS.filter(function(x){ return x.key === qKey; })[0];
+    if(!q) return null;
+    return q.options.filter(function(o){ return o.value === value; })[0] || null;
+  }
+
+  function computeReceipt(){
+    var items = [];
+    var total = 0;
+
+    if(answers.q1){
+      var t = findOption('q1', answers.q1);
+      items.push({icon:t.emoji, label:t.label, value:TASK_VALUES[answers.q1]});
+      total += TASK_VALUES[answers.q1];
+    }
+    if(answers.q3){
+      items.push({icon:'⏱️', label:'Tempo disponível', value:TIME_VALUES[answers.q3]});
+      total += TIME_VALUES[answers.q3];
+    }
+    if(answers.q2){
+      items.push({icon:'✅', label:'Perfil elegível', value:null});
+    }
+    if(answers.q5){
+      items.push({ icon:'🎯', label:'Perfil confirmado', value:null });
+    }
+
+    return { items:items, total: Math.max(100, total) };
+  }
+
+  function receiptHTML(final){
+    var r = computeReceipt();
+    if(r.items.length === 0) return '';
+
+    var rows = r.items.map(function(i){
+      var val = (i.value !== null) ? ('R$' + i.value) : '✓';
+      return '<div class="receipt-row"><span class="r-left"><span class="r-icon">' + i.icon + '</span>' + i.label + '</span><span>' + val + '</span></div>';
+    }).join('');
+
+    var totalBlock = '';
+    var stamp = '';
+    if(final){
+      totalBlock = '<div class="receipt-divider"></div>'
+        + '<div class="receipt-row receipt-total"><span>Estimativa / dia</span>'
+        + '<span id="totalNum" data-target="' + r.total + '">R$0</span></div>';
+      stamp = '<div class="stamp">PERFIL<br>APROVADO</div>';
+    }
+
+    return '<div class="receipt ' + (final ? 'receipt-final' : '') + '">'
+      + stamp
+      + '<p class="receipt-title">Recibo da sua rotina</p>'
+      + rows
+      + totalBlock
+      ;
+  }
+
+  function renderTopbar(){
+    var topbar = document.getElementById('topbar');
+    var step = STEPS[current];
+    if(step.type !== 'question'){
+      topbar.style.display = 'none';
+      topbar.innerHTML = '';
+      return;
+    }
+    topbar.style.display = 'flex';
+    var qNum = step.qNum || 1;
+    var pct = (qNum / 5) * 100;
+    topbar.innerHTML = '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>'
+      + '<span class="step-label" style="background:#E7F3EB; padding:4px 12px; border-radius:99px; color:#16A34A; font-weight:700;"><span style="color:#16A34A">' + String(qNum).padStart(2,'0') + '</span> / 05</span>';
+  }
+
+  function renderLanding(){
+    return ''
+      + ''
+      + ''
+      + '<div class="landing-badge">'
+      + '  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
+      + '  Teste rápido · 30 segundos'
+      + '</div>'
+      + '<div class="social-proof-banner">'
+      + '  <div class="sp-avatars">'
+      + '    <img src="https://i.pravatar.cc/100?img=1" alt="Avatar">'
+      + '    <img src="https://i.pravatar.cc/100?img=2" alt="Avatar">'
+      + '    <img src="https://i.pravatar.cc/100?img=3" alt="Avatar">'
+      + '    <img src="https://i.pravatar.cc/100?img=4" alt="Avatar">'
+      + '    <img src="https://i.pravatar.cc/100?img=5" alt="Avatar">'
+      + '  </div>'
+      + '  <div class="sp-text">'
+      + '    <div class="sp-stars">★★★★★</div>'
+      + '    <strong>+10.000 pessoas</strong><br>já fizeram o teste'
+      + '  </div>'
+      + '</div>'
+      + '<h1 class="landing-title" style="letter-spacing:-1.2px; font-size:34px; line-height:1.1;">'
+      + '  R$ 100 a R$ 350 por dia fazendo<br>'
+      + '  <span class="highlight">tarefas de casa.'
+      + '    <svg class="underline" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M0,5 Q100,0 200,8" stroke="#F9C300" stroke-width="3" fill="none"/></svg>'
+      + '  </span>'
+      + '</h1>'
+      + '<p class="landing-sub-text">'
+      + '  Descubra como começar a receber<br>fazendo tarefas simples em casa.'
+      + '</p>'
+      + '<div class="hero-layout">'
+      + '  <div class="hero-image-col">'
+      + '    <img src="https://i.ibb.co/dsz2rqG0/people-doing-chores-with-phones-1786483589887.jpg" alt="Pessoas fazendo tarefas com celular">'
+      + '  </div>'
+
+      + '</div>'
+      + '<button class="landing-cta-btn" data-action="start">'
+      + '  Começar agora →'
+      + '</button>'
+
+      + '</div>';
+  }
+  function renderQuestion(step){
+    var opts = step.options.map(function(o){
+      var subHtml = o.sub ? '<span class="opt-sub">' + o.sub + '</span>' : '';
+      return '<button class="option" data-value="' + o.value + '">'
+        + '<span class="opt-icon">' + o.emoji + '</span>'
+        + '<div class="opt-texts"><span class="opt-label">' + o.label + '</span>' + subHtml + '</div>'
+        + '<div class="opt-radio"></div>'
+        + '</button>';
+    }).join('');
+
+    var imgHtml = '';
+
+    return ''
+      + '<div class="q-header">'
+      +   '<div class="q-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Pergunta ' + step.qNum + ' de 5</div>'
+      +   '<div class="q-title-row">'
+      +     '<div class="q-title-col">'
+      +       '<h2>' + step.title + '</h2>'
+      +       (step.sub ? '<p class="qsub">' + step.sub + '</p>' : '')
+      +     '</div>'
+      +     imgHtml
+      +   '</div>'
+      + '</div>'
+      + '<div class="options">' + opts + '</div>';
+  }
+
+  function renderConfirm(){
+    var taskObj = answers.q1 ? findOption('q1', answers.q1) : { label: 'Lavar louça', emoji: '🍽️' };
+    var taskLabel = taskObj ? taskObj.label : 'Lavar louça';
+    var taskVal = (answers.q1 && TASK_VALUES[answers.q1]) ? TASK_VALUES[answers.q1] : 60;
+    var timeVal = (answers.q3 && TIME_VALUES[answers.q3]) ? TIME_VALUES[answers.q3] : 60;
+    var totalVal = taskVal + timeVal;
+
+    return ''
+      + '<div class="confirm-container">'
+      +   '<div class="q-badge" style="background:#F0FDF4; border:1px solid #DCFCE7; color:#16A34A; padding:6px 14px; border-radius:99px; font-weight:700; margin-bottom:12px; display:inline-flex; align-items:center; gap:6px;">'
+      +     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Pergunta 6 de 6'
+      +   '</div>'
+      +   '<div class="confirm-spark-left">✦</div>'
+      +   '<div class="confirm-spark-right">✦</div>'
+      +   '<h1 class="confirm-title">Pronta pra descobrir<br>seu plano<br><span style="color:#16A34A;">personalizado?</span></h1>'
+      +   '<p class="confirm-sub">Vamos calcular <strong style="color:#16A34A;">sua estimativa</strong> com base nas suas respostas.</p>'
+      
+      +   '<div class="confirm-cta-wrap">'
+      +     '<button class="confirm-btn" data-action="confirm">'
+      +       '<div class="gift-badge-icon">🎁</div>'
+      +       '<span>Sim, quero ver!</span>'
+      +       '<span style="font-size:22px; margin-left:4px;">→</span>'
+      +     '</button>'
+      +   '</div>'
+
+      +   '<div class="confirm-main-card">'
+      +     '<div class="cmc-header">'
+      +       '<div class="cmc-icon">👛</div>'
+      +       '<div class="cmc-title-wrap">'
+      +         '<div class="cmc-title">Receba da sua rotina</div>'
+      +         '<div class="cmc-sub">Veja sua estimativa com base no que você já faz e no seu tempo disponível.</div>'
+      +       '</div>'
+      +     '</div>'
+
+      +     '<div class="cmc-list">'
+      +       '<div class="cmc-item">'
+      +         '<div class="cmc-item-left">'
+      +           '<div class="cmc-item-icon">🧽</div>'
+      +           '<span class="cmc-item-label">' + taskLabel + '</span>'
+      +         '</div>'
+      +         '<span class="cmc-item-val">R$' + taskVal + '</span>'
+      +       '</div>'
+
+      +       '<div class="cmc-item">'
+      +         '<div class="cmc-item-left">'
+      +           '<div class="cmc-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>'
+      +           '<span class="cmc-item-label">Tempo disponível</span>'
+      +         '</div>'
+      +         '<span class="cmc-item-val">R$' + timeVal + '</span>'
+      +       '</div>'
+
+      +       '<div class="cmc-item">'
+      +         '<div class="cmc-item-left">'
+      +           '<div class="cmc-item-icon" style="background:#16A34A; color:#FFFFFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>'
+      +           '<span class="cmc-item-label">Perfil elegível</span>'
+      +         '</div>'
+      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+      +       '</div>'
+
+      +       '<div class="cmc-item">'
+      +         '<div class="cmc-item-left">'
+      +           '<div class="cmc-item-icon" style="background:#FEE2E2;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>'
+      +           '<span class="cmc-item-label">Perfil confirmado</span>'
+      +         '</div>'
+      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>'
+      +       '</div>'
+      +     '</div>'
+
+      +     '<div class="cmc-divider"></div>'
+
+      +     '<div class="cmc-estimate-box">'
+      +       '<div class="cmc-est-left">'
+      +         '<div class="piggy-icon">🐷</div>'
+      +         '<div class="cmc-est-texts">'
+      +           '<span class="cmc-est-label">Sua estimativa diária</span>'
+      +           '<div class="cmc-est-num">R$' + totalVal + ' <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>'
+      +         '</div>'
+      +       '</div>'
+      +       '<div class="cmc-est-badge">'
+      +         '<div class="cmc-eb-text">Ótimo<br>perfil</div>'
+      +         '<div class="cmc-eb-star">★</div>'
+      +       '</div>'
+      +     '</div>'
+      +   '</div>'
+
+      +   '<div class="confirm-trust-card">'
+      +     '<div class="ctc-col">'
+      +       '<div class="ctc-icon">'
+      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>'
+      +       '</div>'
+      +       '<div>'
+      +         '<div class="ctc-title">Seus dados estão seguros 🔒</div>'
+      +         '<div class="ctc-sub">Utilizamos tecnologia segura para proteger suas informações.</div>'
+      +       '</div>'
+      +     '</div>'
+      +     '<div class="ctc-col">'
+      +       '<div class="ctc-icon">'
+      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
+      +       '</div>'
+      +       '<div>'
+      +         '<div class="ctc-title">100% gratuito</div>'
+      +         '<div class="ctc-sub">Sem taxas, sem pegadinhas e sem compromisso.</div>'
+      +       '</div>'
+      +     '</div>'
+      +   '</div>'
+      + '</div>';
+  }
+
+  function renderLoading(){
+    return '<div class="loading-wrap">'
+      + '<div class="ring" aria-hidden="true"></div>'
+      + '<p class="loading-title">Calculando sua estimativa...</p>'
+      + '<p class="loading-sub">Só um instante</p>'
+      + '</div>';
+  }
+
+  function renderResult(){
+    var taskObj = answers.q1 ? findOption('q1', answers.q1) : { label: 'Lavar louça', emoji: '🧼' };
+    var taskLabel = taskObj ? taskObj.label : 'Lavar louça';
+    var taskVal = (answers.q1 && TASK_VALUES[answers.q1]) ? TASK_VALUES[answers.q1] : 60;
+    var timeVal = (answers.q3 && TIME_VALUES[answers.q3]) ? TIME_VALUES[answers.q3] : 40;
+    var totalVal = taskVal + timeVal;
+
+    return ''
+      + '<div class="result-hero-wrap">'
+      + '  <div class="result-hero-text">'
+      + '    <div class="result-eyebrow"><span style="font-size:14px;">🏆</span> Seu resultado</div>'
+      + '    <h1 class="result-title">Você tem o <span class="result-highlight">perfil ideal!</span> 🎉</h1>'
+      + '    <p class="result-sub">Baseado no que você já faz — <strong class="rs-task">' + taskLabel.toLowerCase() + '</strong> — e no seu tempo disponível, veja sua estimativa:</p>'
+      + '  </div>'
+      + '</div>'
+
+      + '<div class="result-receipt-card">'
+      + '  <div class="rc-header">Receba até essa renda realizando:</div>'
+      
+      + '  <div class="rc-row">'
+      + '    <div class="rc-left">'
+      + '      <div class="rc-icon-bg green-soft">'
+      + '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 18v4"/><path d="M4.93 4.93l4.24 4.24"/><path d="M14.83 14.83l4.24 4.24"/><path d="M14.83 9.17l4.24-4.24"/><path d="M4.93 19.07l4.24-4.24"/></svg>'
+      + '      </div>'
+      + '      <span class="rc-label">' + taskLabel + '</span>'
+      + '    </div>'
+      + '    <div class="rc-val green">R$' + taskVal + '</div>'
+      + '  </div>'
+
+      + '  <div class="rc-row">'
+      + '    <div class="rc-left">'
+      + '      <div class="rc-icon-bg green-soft">'
+      + '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
+      + '      </div>'
+      + '      <span class="rc-label">Tempo disponível</span>'
+      + '    </div>'
+      + '    <div class="rc-val green">R$' + timeVal + '</div>'
+      + '  </div>'
+
+      + '  <div class="rc-row">'
+      + '    <div class="rc-left">'
+      + '      <div class="rc-icon-bg green-filled">'
+      + '        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+      + '      </div>'
+      + '      <span class="rc-label">Perfil elegível</span>'
+      + '    </div>'
+      + '    <div class="rc-check">'
+      + '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+      + '    </div>'
+      + '  </div>'
+
+      + '  <div class="rc-row">'
+      + '    <div class="rc-left">'
+      + '      <div class="rc-icon-bg red-soft">'
+      + '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
+      + '      </div>'
+      + '      <span class="rc-label">Perfil confirmado</span>'
+      + '    </div>'
+      + '    <div class="rc-check">'
+      + '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
+      + '    </div>'
+      + '  </div>'
+
+      + '  <div class="rc-divider"></div>'
+
+      + '  <div class="rc-total-row">'
+      + '    <span class="rc-total-label">Estimativa / dia</span>'
+      + '    <div class="rc-total-val-wrap">'
+      + '      <span class="rc-total-val" id="totalNum" data-target="' + totalVal + '">R$0</span>'
+      + '      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>'
+      + '    </div>'
+      + '  </div>'
+      + '</div>'
+
+      + '<div class="result-step-banner">'
+      + '  <div class="rsb-thumb">'
+      + '    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>'
+      + '  </div>'
+      + '  <div class="rsb-content">'
+      + '    <div class="rsb-title">Falta só 1 passo</div>'
+      + '    <div class="rsb-sub">Veja como você pode receber sua primeira Pix hoje 💸</div>'
+      + '  </div>'
+      + '</div>'
+
+      + '<div class="result-cta-wrap">'
+      + '  <div class="cta-arrow-indicator">'
+      + '    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4c0 8 4 12 12 12M12 12l4 4-4 4"/></svg>'
+      + '  </div>'
+      + '  <button class="btn-primary btn-result-cta" data-action="show-video">'
+      + '    Ver como receber agora <span style="margin-left:4px;">→</span>'
+      + '  </button>'
+      + '</div>';
+  }
+
+  function renderVideo(){
+    return ''
+      + '<h2 style="margin-bottom:18px; font-size:24px; font-weight:800; line-height:1.3; text-align:center; color:#111827;">Assista até o <span style="color:#16A34A;">final</span>, eu vou te mostrar <span style="color:#16A34A;">como funciona</span> 👇</h2>'
+      + '<!-- Player Vturb -->'
+      + '<iframe src="https://scripts.converteai.net/00987fc7-eae6-48fd-92b9-b866f2f62103/players/6a7911edbda06d1b04c88055/embed.html" id="ig-vid_6a7911edbda06d1b04c88055" allowfullscreen="true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; web-share" style="width: 100%; aspect-ratio: 9/16; border-radius: var(--radius-md); overflow: hidden; border: none; margin: 16px 0 18px;"></iframe>'
+      + '<!-- 🔗 Troque o href abaixo pelo link real -->'
+      + '<a class="btn-cta-green" href="https://pay.lowify.com.br/checkout?product_id=b9pSRV" data-action="cta" id="cta-button" style="display: none;">'
+      + '  <span style="font-size:20px; font-weight:800; letter-spacing: -0.3px;">QUERO COMEÇAR AGORA →</span>'
+      + '  <span style="font-size:13px; font-weight:700; opacity:0.95; background:rgba(0,0,0,0.18); padding:3px 14px; border-radius:99px;">Por apenas R$ 27 (Acesso Imediato)</span>'
+      + '</a>'
+      + '<img id="cta-image" src="https://i.ibb.co/KjznzZm2/imagem-site-otimizada.webp" alt="Segurança e Garantia" decoding="async" fetchpriority="high" style="display: none; width: 100%; max-width: 100%; margin-top: 14px; border-radius: 12px; object-fit: contain;" />';
+  }
+
+  function animateCount(){
+    var el = document.getElementById('totalNum');
+    if(!el) return;
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced){ el.textContent = 'R$' + target; return; }
+
+    var duration = 700;
+    var startTime = null;
+    function tick(now){
+      if(startTime === null) startTime = now;
+      var p = Math.min((now - startTime) / duration, 1);
+      el.textContent = 'R$' + Math.floor(p * target);
+      if(p < 1) requestAnimationFrame(tick);
+      else el.textContent = 'R$' + target;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // 📊 Envia a etapa alcançada + UTMs da campanha pra sua planilha (Apps Script)
+  function trackEvent(step){
+    if(!TRACKING_ENDPOINT || TRACKING_ENDPOINT.indexOf('COLE_AQUI') > -1) return;
+
+    var payload = {
+      session_id: sessionId,
+      step: step,
+      ts: new Date().toISOString(),
+      utm_source: utms.utm_source,
+      utm_medium: utms.utm_medium,
+      utm_campaign: utms.utm_campaign,
+      utm_content: utms.utm_content,
+      utm_term: utms.utm_term
+    };
+
+    fetch(TRACKING_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).catch(function(){ /* falha de rede não deve travar o quiz */ });
+  }
+
+  function stepEventName(step){
+    if(step.type === 'landing') return 'quiz_start';
+    if(step.type === 'question') return 'quiz_' + step.key;
+    if(step.type === 'confirm') return 'quiz_confirm';
+    if(step.type === 'result') return 'quiz_result_view';
+    if(step.type === 'video') return 'quiz_video_view';
+    return null;
+  }
+
+  function render(){
+    var stage = document.getElementById('stage');
+    if (!stage) return;
+    var step = STEPS[current];
+    var html = '';
+
+    if(step.type === 'landing') html = renderLanding();
+    else if(step.type === 'question') html = renderQuestion(step);
+    else if(step.type === 'confirm') html = renderConfirm();
+    else if(step.type === 'loading') html = renderLoading();
+    else if(step.type === 'result') html = renderResult();
+    else if(step.type === 'video') html = renderVideo();
+
+    stage.innerHTML = html;
+    stage.classList.remove('anim');
+    void stage.offsetWidth;
+    stage.classList.add('anim');
+
+    renderTopbar();
+
+    document.body.classList.toggle('center-screen', step.type === 'video'); document.body.classList.toggle('is-landing', step.type === 'landing');
+
+    var evtName = stepEventName(step);
+    if(evtName) trackEvent(evtName);
+
+    if(step.type === 'loading'){
+      setTimeout(function(){ current++; render(); }, 1500);
+    }
+    if(step.type === 'result'){
+      animateCount();
+    }
+    if(step.type === 'video'){
+      setTimeout(function(){
+        var cta = document.getElementById('cta-button');
+        if(cta) cta.style.display = 'flex';
+        var img = document.getElementById('cta-image');
+        if(img) img.style.display = 'block';
+      }, 100000);
+    }
+  }
+
+  var stageEl = document.getElementById('stage');
+  if (stageEl) {
+    stageEl.addEventListener('click', function(e){
+      var optBtn = e.target.closest('.option');
+    if(optBtn){
+      var step = STEPS[current];
+      answers[step.key] = optBtn.getAttribute('data-value');
+      current++;
+      render();
+      return;
+    }
+    var actionEl = e.target.closest('[data-action]');
+    if(actionEl){
+      var action = actionEl.getAttribute('data-action');
+      if(action === 'start' || action === 'confirm' || action === 'show-video'){
+        current++;
+        render();
+      }
+      if(action === 'cta'){
+        trackEvent('quiz_cta_click');
+        // ⚠️ A conversão de compra (Purchase) você registra na página do CHECKOUT real (Hotmart, etc.), não aqui
+      }
+      // 'play-placeholder' é só visual — sem ação real até você trocar pelo player de verdade
+    }
+  });
+  }
+
+  render();
+
+})();
+</script>
+</body>
+</html>

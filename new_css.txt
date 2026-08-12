@@ -1,0 +1,50 @@
+  .landing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #E7F3EB;
+    border: 1px solid #C2E2CC;
+    color: #198737;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 99px;
+    margin-bottom: 24px;
+  }
+  .social-proof-banner { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 24px; }
+  .sp-avatars { display: flex; }
+  .sp-avatars img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; margin-left: -10px; }
+  .sp-avatars img:first-child { margin-left: 0; }
+  .sp-text { text-align: left; font-size: 11px; color: #4A5D52; line-height: 1.2; }
+  .sp-stars { color: #F9C300; font-size: 14px; margin-bottom: 2px; display:flex; gap:2px; }
+  .sp-text strong { color: #112318; }
+  .landing-title { font-size: 34px; font-weight: 800; color: #112318; line-height: 1.1; margin-bottom: 16px; letter-spacing: -1px; }
+  .landing-title .highlight { color: #198737; position: relative; display: inline-block; }
+  .landing-title .highlight svg { position: absolute; bottom: -6px; left: 0; width: 100%; height: 8px; z-index: -1; }
+  .landing-sub-text { font-size: 15px; color: #4A5D52; margin-bottom: 24px; line-height: 1.4; }
+  .landing-sub-text strong { color: #198737; }
+  .hero-layout { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .hero-image-col { flex: 1; position: relative; display: flex; justify-content: center;}
+  .hero-image-col img { width: 100%; max-width: 180px; border-radius: 16px; mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
+  .hero-benefits-col { flex: 1.2; display: flex; flex-direction: column; gap: 16px; text-align: left; }
+  .h-benefit { display: flex; align-items: flex-start; gap: 10px; }
+  .h-b-icon { width: 32px; height: 32px; background: #E7F3EB; color: #198737; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .h-b-icon svg { width: 18px; height: 18px; }
+  .h-b-text { font-size: 11px; color: #4A5D52; line-height: 1.3; }
+  .h-b-text strong { font-size: 13px; color: #112318; display: block; }
+  .landing-cta-btn { background: linear-gradient(180deg, #28A149 0%, #15732E 100%); color: white; width: 100%; padding: 18px; border-radius: 99px; font-size: 20px; font-weight: 700; border: none; box-shadow: 0 8px 24px rgba(25, 135, 55, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-bottom: 24px; transition: transform 0.2s; }
+  .landing-cta-btn:hover { transform: scale(1.02); }
+  .trust-badges-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; background: #F9FAFB; border-radius: 16px; padding: 16px 8px; margin-bottom: 16px; }
+  .t-badge { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+  .t-badge svg { width: 24px; height: 24px; color: #198737; }
+  .t-badge-text { font-size: 10px; color: #4A5D52; line-height: 1.2; }
+  .t-badge-text strong { color: #112318; display: block; font-size: 11px; }
+  .footer-trust-text { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: #4A5D52; font-weight: 500; }
+  .footer-trust-text svg { width: 14px; height: 14px; }
+  .banknote { position: absolute; z-index: 0; opacity: 0.6; pointer-events: none; }
+  .bn-1 { top: 20px; left: -50px; width: 120px; transform: rotate(-15deg); }
+  .bn-2 { top: 40px; right: -60px; width: 100px; transform: rotate(25deg); }
+  .bn-3 { bottom: 40px; left: -40px; width: 90px; transform: rotate(-10deg); }
+  .bn-4 { bottom: 20px; right: -50px; width: 110px; transform: rotate(15deg); }
+  .landing-card { background: white; border-radius: 24px; padding: 32px 16px 24px; position: relative; z-index: 1; overflow: hidden;}
+  .landing-bg-dots { position: absolute; top:0; left:0; width:100%; height:100%; background-image: radial-gradient(circle at 1px 1px, rgba(143,168,136,0.15) 1px, transparent 0); background-size: 22px 22px; z-index: -1; }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  try {
+    var desc = Object.getOwnPropertyDescriptor(window, 'fetch');
+    if (desc && !desc.set) {
+      Object.defineProperty(window, 'fetch', {
+        value: desc.get ? desc.get() : window.fetch,
+        writable: true,
+        configurable: true
+      });
+    }
+  } catch(e) {}
+</script>
+<script>
+  window.fetch = function() { console.log('hacked'); };
+</script>
+</head>
+<body>
+</body>
+</html>

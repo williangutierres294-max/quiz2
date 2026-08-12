@@ -1,0 +1,8 @@
+{
+  "name": "Quiz - Renda Extra em Casa",
+  "description": "Quiz interativo para descobrir o perfil e estimativa de ganhos com tarefas do dia a dia em casa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
