@@ -31,6 +31,15 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- ConverteAI / Vturb Streaming Preconnects -->
+<link rel="preconnect" href="https://cdn.converteai.net" crossorigin>
+<link rel="preconnect" href="https://scripts.converteai.net">
+<link rel="preconnect" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+<script src="https://scripts.converteai.net/00987fc7-eae6-48fd-92b9-b866f2f62103/players/6a7911edbda06d1b04c88055/player.js" async></script>
 <link rel="preload" as="image" href="./ganhe-ate-300-por-dia.webp" type="image/webp">
 <link rel="preload" as="image" href="./imagem-site-otimizada.webp" type="image/webp">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -152,6 +161,8 @@
   /* Video area */
   .video-section {
     margin-bottom: 20px;
+    contain: layout style;
+    transform: translateZ(0);
   }
   .video-title {
     font-size: 14px;
@@ -168,6 +179,9 @@
     overflow: hidden;
     margin: 0;
     box-shadow: 0 12px 32px rgba(22, 163, 74, 0.2);
+    transform: translateZ(0);
+    will-change: transform;
+    background: #000;
   }
 
   /* CTA Button */
@@ -479,7 +493,7 @@
       <!-- VIDEO SECTION (LOGO ABAIXO) -->
       <div class="video-section">
         <div class="video-title">Assista ao vídeo curto abaixo para ver como funciona 👇</div>
-        <iframe src="https://scripts.converteai.net/00987fc7-eae6-48fd-92b9-b866f2f62103/players/6a7911edbda06d1b04c88055/embed.html" id="ig-vid_6a7911edbda06d1b04c88055" class="video-iframe" allowfullscreen="true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; web-share"></iframe>
+        <iframe src="https://scripts.converteai.net/00987fc7-eae6-48fd-92b9-b866f2f62103/players/6a7911edbda06d1b04c88055/embed.html" id="ig-vid_6a7911edbda06d1b04c88055" class="video-iframe" allowfullscreen="true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; web-share" loading="eager" referrerpolicy="no-referrer-when-downgrade" title="Vídeo de Apresentação"></iframe>
       </div>
 
       <!-- TRUST BADGES -->
